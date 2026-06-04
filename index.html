@@ -1,0 +1,608 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>泰国顶奢酒店手册</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box;}
+body{background:#f5f3ef;font-family:'PingFang SC','Microsoft YaHei','-apple-system',sans-serif;color:#333;-webkit-tap-highlight-color:transparent;}
+
+.header{background:linear-gradient(135deg,#0f0f1a,#1a1a2e);color:#d4af37;padding:48px 20px 36px;text-align:center;}
+.header h1{font-size:30px;font-weight:300;letter-spacing:6px;margin-bottom:4px;}
+.header .sub{color:#a09070;font-size:14px;letter-spacing:3px;}
+.header .badge{display:inline-block;background:#d4af37;color:#1a1a2e;padding:8px 24px;border-radius:20px;font-size:14px;margin-top:16px;font-weight:bold;}
+
+.container{max-width:600px;margin:0 auto;padding:16px;}
+
+/* Home page sections */
+.section{padding:12px 0;}
+.section-title{font-size:20px;color:#1a1a2e;font-weight:600;padding:12px 4px 8px;border-bottom:2px solid #d4af37;letter-spacing:3px;display:flex;align-items:center;gap:6px;}
+
+.hotel-link{display:block;background:#fff;border-radius:12px;padding:14px 16px;margin:8px 0;box-shadow:0 1px 6px rgba(0,0,0,0.05);border:1px solid #eee;color:#333;text-decoration:none;transition:all 0.15s;position:relative;overflow:hidden;}
+.hotel-link:active{background:#f5f3ef;transform:scale(0.98);}
+.hotel-link .name{font-size:17px;font-weight:600;}
+.hotel-link .name-en{font-size:12px;color:#a09070;margin:1px 0 4px;}
+.hotel-link .tags{display:flex;gap:4px;flex-wrap:wrap;margin:4px 0;}
+.hotel-link .tag{background:#f5f0e8;color:#6a5a3a;padding:2px 8px;border-radius:6px;font-size:11px;}
+.hotel-link .price{font-size:13px;color:#b8860b;font-weight:500;}
+
+/* Detail pages */
+.detail-page{display:none;}
+.detail-page:target{display:block;}
+.detail-page:target ~ #home-page{display:none;}
+#home-page{display:block;}
+
+.detail-header{padding:40px 20px 24px;color:#fff;position:relative;border-radius:0 0 20px 20px;margin:0 0 12px;}
+.detail-back{display:inline-block;color:rgba(255,255,255,0.8);text-decoration:none;font-size:16px;margin-bottom:12px;padding:6px 12px;border-radius:8px;background:rgba(255,255,255,0.1);}
+.detail-header .name{font-size:24px;font-weight:600;}
+.detail-header .name-en{font-size:14px;color:rgba(255,255,255,0.7);padding:2px 0 6px;}
+.detail-badge{display:inline-block;padding:5px 14px;border-radius:12px;font-size:12px;font-weight:bold;margin-top:6px;}
+
+.detail-body{padding:0 0 48px;}
+
+.info-card{background:#fff;border-radius:12px;margin:8px 0;box-shadow:0 1px 6px rgba(0,0,0,0.04);border:1px solid #eee;overflow:hidden;}
+.info-header{display:flex;align-items:center;gap:8px;padding:12px 14px;cursor:pointer;}
+.info-header .icon{font-size:18px;}
+.info-header .title{font-size:15px;font-weight:600;flex:1;}
+.info-header .arrow{transition:transform 0.2s;color:#a09070;font-size:16px;}
+.info-content{max-height:0;overflow:hidden;transition:max-height 0.3s;padding:0 14px;}
+.info-expand{display:none;}
+.info-expand:checked ~ .info-content{max-height:2000px;padding:0 14px 14px;}
+.info-expand:checked ~ .info-header .arrow{transform:rotate(180deg);}
+.info-content p{font-size:14px;color:#555;line-height:1.7;margin-bottom:4px;}
+
+.sub-section{margin-top:8px;background:#f9f6f0;border-radius:8px;border:1px solid #e8dcc8;overflow:hidden;}
+.sub-toggle{display:none;}
+.sub-toggle:checked ~ .sub-content{max-height:1000px;padding:10px 12px 12px;border-top:1px solid #e8dcc8;}
+.sub-label{display:block;padding:10px 12px;font-size:13px;color:#1a1a2e;cursor:pointer;position:relative;}
+.sub-label:after{content:'+';float:right;color:#d4af37;font-size:16px;font-weight:bold;}
+.sub-toggle:checked ~ .sub-label:after{content:'−';}
+.sub-content{max-height:0;overflow:hidden;padding:0 12px;font-size:13px;color:#555;line-height:1.6;transition:all 0.25s;}
+
+/* Comparison table */
+.compare-table{margin:12px 0;border-radius:10px;overflow:hidden;border:1px solid #eee;}
+.compare-row{display:flex;padding:10px 12px;border-bottom:1px solid #f0f0f0;background:#fff;}
+.compare-row:last-child{border-bottom:none;}
+.compare-row.active{background:#faf6ef;}
+.compare-hdr{background:#1a1a2e;padding:10px 12px;}
+.compare-hdr span{color:#d4af37;font-weight:400;font-size:13px;}
+.c-hotel{flex:2;font-size:13px;font-weight:500;color:#1a1a2e;}
+.c-style{flex:1.5;font-size:12px;color:#777;}
+.c-price{flex:1;font-size:12px;color:#b8860b;text-align:right;}
+.c-link{text-decoration:none;color:inherit;display:flex;padding:10px 12px;border-bottom:1px solid #f0f0f0;background:#fff;}
+
+.footer{text-align:center;padding:32px 20px 48px;}
+.footer .logo{color:#d4af37;font-size:16px;letter-spacing:6px;}
+.footer p{color:#a09070;font-size:13px;margin-top:4px;}
+</style>
+</head>
+<body>
+
+<!-- ===== HOME PAGE ===== -->
+<div id="home-page">
+
+<div class="header">
+  <h1>🇹🇭 泰国顶奢酒店</h1>
+  <div class="sub">Luxury Hotels of Thailand</div>
+  <div class="badge">🔥 全部六折优惠</div>
+</div>
+
+<div class="container">
+
+<div class="section">
+<div class="section-title">📍 普吉岛</div>
+
+<a class="hotel-link" href="#amanpuri">
+  <div class="name">安缦璞瑞</div>
+  <div class="name-en">Amanpuri</div>
+  <div class="tags"><span class="tag">避世禅意</span><span class="tag">安缦朝圣</span><span class="tag">私人海滩</span></div>
+  <div class="price">💰 8,000-15,000 泰铢/晚</div>
+</a>
+
+<a class="hotel-link" href="#rosewood">
+  <div class="name">普吉瑰丽</div>
+  <div class="name-en">Rosewood Phuket</div>
+  <div class="tags"><span class="tag">现代奢华</span><span class="tag">设计师酒店</span><span class="tag">翡翠湾</span></div>
+  <div class="price">💰 6,000-12,000 泰铢/晚</div>
+</a>
+
+<a class="hotel-link" href="#banyan">
+  <div class="name">普吉悦榕庄</div>
+  <div class="name-en">Banyan Tree Phuket</div>
+  <div class="tags"><span class="tag">东南亚度假</span><span class="tag">私密别墅</span><span class="tag">性价比</span></div>
+  <div class="price">💰 4,000-8,000 泰铢/晚</div>
+</a>
+</div>
+
+<div class="section">
+<div class="section-title">📍 苏梅岛</div>
+
+<a class="hotel-link" href="#sixsenses">
+  <div class="name">苏梅岛六善</div>
+  <div class="name-en">Six Senses Samui</div>
+  <div class="tags"><span class="tag">原木自然</span><span class="tag">避世养生</span><span class="tag">悬崖海景</span></div>
+  <div class="price">💰 5,000-10,000 泰铢/晚</div>
+</a>
+
+<a class="hotel-link" href="#wsamui">
+  <div class="name">苏梅岛W酒店</div>
+  <div class="name-en">W Koh Samui</div>
+  <div class="tags"><span class="tag">潮流时尚</span><span class="tag">派对氛围</span><span class="tag">年轻人</span></div>
+  <div class="price">💰 4,500-9,000 泰铢/晚</div>
+</a>
+</div>
+
+<div class="section">
+<div class="section-title">📍 曼谷</div>
+
+<a class="hotel-link" href="#mandarin">
+  <div class="name">曼谷文华东方</div>
+  <div class="name-en">Mandarin Oriental Bangkok</div>
+  <div class="tags"><span class="tag">百年经典</span><span class="tag">殖民风情</span><span class="tag">湄南河</span></div>
+  <div class="price">💰 6,000-15,000 泰铢/晚</div>
+</a>
+
+<a class="hotel-link" href="#capella">
+  <div class="name">曼谷嘉佩乐</div>
+  <div class="name-en">Capella Bangkok</div>
+  <div class="tags"><span class="tag">现代极简</span><span class="tag">顶级新贵</span><span class="tag">湄南河</span></div>
+  <div class="price">💰 7,000-14,000 泰铢/晚</div>
+</a>
+
+<a class="hotel-link" href="#fsbangkok">
+  <div class="name">曼谷四季</div>
+  <div class="name-en">Four Seasons Bangkok</div>
+  <div class="tags"><span class="tag">现代奢华</span><span class="tag">大气稳重</span><span class="tag">河畔</span></div>
+  <div class="price">💰 5,000-10,000 泰铢/晚</div>
+</a>
+
+<a class="hotel-link" href="#peninsula">
+  <div class="name">曼谷半岛</div>
+  <div class="name-en">The Peninsula Bangkok</div>
+  <div class="tags"><span class="tag">东方优雅</span><span class="tag">经典奢华</span><span class="tag">河景</span></div>
+  <div class="price">💰 5,000-12,000 泰铢/晚</div>
+</a>
+
+<a class="hotel-link" href="#waldorf">
+  <div class="name">曼谷华尔道夫</div>
+  <div class="name-en">Waldorf Astoria Bangkok</div>
+  <div class="tags"><span class="tag">美式奢华</span><span class="tag">高空城景</span><span class="tag">市中心</span></div>
+  <div class="price">💰 4,000-8,000 泰铢/晚</div>
+</a>
+</div>
+
+<div class="section">
+<div class="section-title">📍 清迈</div>
+
+<a class="hotel-link" href="#fschiangmai">
+  <div class="name">清迈四季</div>
+  <div class="name-en">Four Seasons Chiang Mai</div>
+  <div class="tags"><span class="tag">田园泰式</span><span class="tag">稻田泳池</span><span class="tag">清幽避世</span></div>
+  <div class="price">💰 3,500-7,000 泰铢/晚</div>
+</a>
+</div>
+
+</div>
+
+<div class="footer">
+  <div class="logo">云端之旅</div>
+  <p>带您住遍全世界最好的酒店</p>
+</div>
+
+</div>
+
+<!-- ===== DETAIL PAGES ===== -->
+
+<!-- 安缦璞瑞 -->
+<div id="amanpuri" class="detail-page">
+<div class="detail-header" style="background:linear-gradient(135deg,#2c1810,#5c3a28,#8b6b4a,#3d2b1f);">
+<a class="detail-back" href="#home-page">← 返回列表</a>
+<div class="name">安缦璞瑞</div>
+<div class="name-en">Amanpuri · 普吉岛 Phuket</div>
+<div class="detail-badge" style="background:#d4af37;color:#2c1810;">🔥 3天2晚 · 6折优惠</div>
+</div>
+<div class="container detail-body">
+
+<div class="info-card">
+<input type="checkbox" id="a1" class="info-expand" checked>
+<label class="info-header" for="a1">
+<span class="icon">📍</span><span class="title">位置与交通</span><span class="arrow">▼</span>
+</label>
+<div class="info-content">
+<p>位于普吉岛西海岸潘西海滩（Pansea Beach），私密海湾独享整片沙滩。从普吉机场乘车约40分钟，酒店提供免费机场接送服务。周边10分钟车程可达芭东夜市和普吉镇。</p>
+<div class="sub-section">
+<input type="checkbox" id="a1a" class="sub-toggle">
+<label class="sub-label" for="a1a">🏖️ 潘西海滩详细介绍</label>
+<div class="sub-content">潘西海滩是普吉岛最私密的海滩之一，仅对安缦住客开放。沙滩细白柔软，全长约300米，被热带绿植环绕。日落时分景色绝美，酒店提供沙滩晚餐服务。</div>
+</div>
+<div class="sub-section">
+<input type="checkbox" id="a1b" class="sub-toggle">
+<label class="sub-label" for="a1b">🗺️ 周边景点推荐</label>
+<div class="sub-content">芭东夜市（车程10分钟）- 感受泰国夜市文化<br>普吉大佛（车程20分钟）- 山顶俯瞰全岛<br>查龙寺（车程25分钟）- 普吉最大佛教寺庙<br>幻多奇乐园（车程15分钟）- 适合家庭游客</div>
+</div>
+</div>
+</div>
+
+<div class="info-card">
+<input type="checkbox" id="a2" class="info-expand">
+<label class="info-header" for="a2">
+<span class="icon">🏠</span><span class="title">环境与设施</span><span class="arrow">▼</span>
+</label>
+<div class="info-content">
+<p>安缦璞瑞坐落于普吉岛西海岸的潘西海滩，全世界第一家安缦酒店，自1988年开业至今仍保持顶级水准。共40栋泰式凉亭别墅，被热带花园环绕，每栋都有独立庭院。员工与客人比例高达5:1。</p>
+<div class="sub-section">
+<input type="checkbox" id="a2a" class="sub-toggle">
+<label class="sub-label" for="a2a">🏊 泳池&SPA</label>
+<div class="sub-content">40米无边泳池俯瞰安达曼海，水疗中心占地1000㎡，提供传统泰式按摩、阿育吠陀疗程和私人瑜伽课程。</div>
+</div>
+<div class="sub-section">
+<input type="checkbox" id="a2b" class="sub-toggle">
+<label class="sub-label" for="a2b">🍽️ 餐饮体验</label>
+<div class="sub-content">主餐厅The Terrace提供正宗泰式和意式料理，Nama日式餐厅由东京大厨主理，海滩烧烤在月光下享用。</div>
+</div>
+</div>
+</div>
+
+<div class="info-card">
+<input type="checkbox" id="a3" class="info-expand">
+<label class="info-header" for="a3">
+<span class="icon">🎨</span><span class="title">风格与设计</span><span class="arrow">▼</span>
+</label>
+<div class="info-content">
+<p>泰式凉亭建筑风格，由建筑师Ed Tuttle操刀设计。深色木质结构配以泰丝软装，整体呈现低调奢华的禅意美学。每栋别墅都融合了传统泰式建筑元素与现代舒适设施。</p>
+</div>
+</div>
+
+<div class="info-card">
+<input type="checkbox" id="a4" class="info-expand">
+<label class="info-header" for="a4">
+<span class="icon">💰</span><span class="title">价格与优惠</span><span class="arrow">▼</span>
+</label>
+<div class="info-content">
+<p>原价 8,000-15,000 泰铢/晚<br>🔥 限时优惠：3天2晚 六折<br>🎁 额外赠送：每日双早 + 机场接送 + 100美元SPA代金券</p>
+<div class="sub-section">
+<input type="checkbox" id="a4a" class="sub-toggle">
+<label class="sub-label" for="a4a">📋 房型及对应价格</label>
+<div class="sub-content">庭园套房 — 8,000泰铢/晚<br>海景套房 — 11,000泰铢/晚<br>海景泳池别墅 — 15,000泰铢/晚<br>安缦别墅 — 35,000泰铢/晚<br>（以上为原价，优惠价在此基础上6折）</div>
+</div>
+<div class="sub-section">
+<input type="checkbox" id="a4b" class="sub-toggle">
+<label class="sub-label" for="a4b">📞 立即咨询预订</label>
+<div class="sub-content">请联系我们获取最新优惠和空房情况。支持微信/支付宝支付，提供中文客服全程服务。</div>
+</div>
+</div>
+</div>
+
+<div class="info-card">
+<label class="info-header" style="cursor:default;">
+<span class="icon">📊</span><span class="title">同城对比</span>
+</label>
+<div class="compare-table">
+<div class="compare-row compare-hdr"><span class="c-hotel">酒店</span><span class="c-style">风格</span><span class="c-price">价格</span></div>
+<div class="compare-row active"><span class="c-hotel">✦ 安缦璞瑞</span><span class="c-style">避世禅意</span><span class="c-price">8,000-15,000</span></div>
+<a class="c-link" href="#rosewood"><span class="c-hotel">普吉瑰丽</span><span class="c-style">现代奢华</span><span class="c-price">6,000-12,000</span></a>
+<a class="c-link" href="#banyan"><span class="c-hotel">悦榕庄</span><span class="c-style">东南亚度假</span><span class="c-price">4,000-8,000</span></a>
+</div>
+</div>
+
+<a class="detail-back" href="#home-page" style="display:block;text-align:center;margin:20px auto 0;width:fit-content;color:#b8860b;border:1px solid #d4af37;background:none;">← 返回酒店列表</a>
+</div>
+</div>
+
+<!-- 普吉瑰丽 -->
+<div id="rosewood" class="detail-page">
+<div class="detail-header" style="background:linear-gradient(135deg,#0a1f2e,#1a4a5e,#2d7a8c,#0f2d3d);">
+<a class="detail-back" href="#home-page">← 返回列表</a>
+<div class="name">普吉瑰丽</div>
+<div class="name-en">Rosewood Phuket · 普吉岛 Phuket</div>
+<div class="detail-badge" style="background:#b8d4d8;color:#0a1f2e;">🔥 3天2晚 · 6折优惠</div>
+</div>
+<div class="container detail-body">
+
+<div class="info-card">
+<input type="checkbox" id="r1" class="info-expand" checked>
+<label class="info-header" for="r1"><span class="icon">📍</span><span class="title">位置与交通</span><span class="arrow">▼</span></label>
+<div class="info-content">
+<p>坐落于普吉岛翡翠湾（Emerald Bay），距普吉机场35分钟车程。远离喧嚣但又不失便利，10分钟可达卡伦观景台。</p>
+<div class="sub-section">
+<input type="checkbox" id="r1a" class="sub-toggle">
+<label class="sub-label" for="r1a">🌊 翡翠湾漫游指南</label>
+<div class="sub-content">翡翠湾得名于其碧绿清澈的海水，是普吉岛最优质的浮潜点之一。酒店有专属沙滩入口，提供浮潜装备免费借用。</div>
+</div>
+</div>
+</div>
+
+<div class="info-card">
+<input type="checkbox" id="r2" class="info-expand">
+<label class="info-header" for="r2"><span class="icon">🏠</span><span class="title">环境与设施</span><span class="arrow">▼</span></label>
+<div class="info-content">
+<p>71间客房及别墅，由知名设计事务所BAR Studio操刀。酒店拥有500㎡无边际泳池、ASAYA水疗中心和三个特色餐厅。</p>
+</div>
+</div>
+
+<div class="info-card">
+<input type="checkbox" id="r3" class="info-expand">
+<label class="info-header" for="r3"><span class="icon">🎨</span><span class="title">风格与设计</span><span class="arrow">▼</span></label>
+<div class="info-content">
+<p>现代奢华风格，融合普吉本土文化元素。室内设计大量运用木质、藤编和石材，营造「精致的在地感」。</p>
+</div>
+</div>
+
+<div class="info-card">
+<input type="checkbox" id="r4" class="info-expand">
+<label class="info-header" for="r4"><span class="icon">💰</span><span class="title">价格与优惠</span><span class="arrow">▼</span></label>
+<div class="info-content">
+<p>原价 6,000-12,000 泰铢/晚<br>🔥 限时优惠：3天2晚 六折<br>🎁 额外赠送：每日双早 + 迷你吧免费</p>
+</div>
+</div>
+
+<div class="info-card">
+<div class="compare-table">
+<div class="compare-row compare-hdr"><span class="c-hotel">酒店</span><span class="c-style">风格</span><span class="c-price">价格</span></div>
+<a class="c-link" href="#amanpuri"><span class="c-hotel">安缦璞瑞</span><span class="c-style">避世禅意</span><span class="c-price">8,000-15,000</span></a>
+<div class="compare-row active"><span class="c-hotel">✦ 普吉瑰丽</span><span class="c-style">现代奢华</span><span class="c-price">6,000-12,000</span></div>
+<a class="c-link" href="#banyan"><span class="c-hotel">悦榕庄</span><span class="c-style">东南亚度假</span><span class="c-price">4,000-8,000</span></a>
+</div>
+</div>
+
+<a class="detail-back" href="#home-page" style="display:block;text-align:center;margin:20px auto 0;width:fit-content;color:#b8860b;border:1px solid #d4af37;background:none;">← 返回酒店列表</a>
+</div>
+</div>
+
+<!-- 悦榕庄 -->
+<div id="banyan" class="detail-page">
+<div class="detail-header" style="background:linear-gradient(135deg,#1a2e1a,#2d5a2d,#4a8c4a,#1e3b1e);">
+<a class="detail-back" href="#home-page">← 返回列表</a>
+<div class="name">普吉悦榕庄</div>
+<div class="name-en">Banyan Tree Phuket · 普吉岛 Phuket</div>
+<div class="detail-badge" style="background:#90d890;color:#1a2e1a;">🔥 3天2晚 · 6折优惠</div>
+</div>
+<div class="container detail-body">
+<div class="info-card">
+<input type="checkbox" id="b1" class="info-expand" checked>
+<label class="info-header" for="b1"><span class="icon">📍</span><span class="title">位置与交通</span><span class="arrow">▼</span></label>
+<div class="info-content"><p>位于普吉岛邦涛海滩（Bang Tao Beach），距机场20分钟车程。普吉乐古浪度假村内，共享18洞高尔夫球场。</p></div>
+</div>
+<div class="info-card">
+<input type="checkbox" id="b2" class="info-expand">
+<label class="info-header" for="b2"><span class="icon">🏠</span><span class="title">环境与设施</span><span class="arrow">▼</span></label>
+<div class="info-content"><p>普吉第一家全泳池别墅度假村，342栋别墅均配私人泳池和花园。悦榕SPA享誉全球，拥有15间理疗室。</p></div>
+</div>
+<div class="info-card">
+<label class="info-header"><span class="icon">📊</span><span class="title">同城对比</span></label>
+<div class="compare-table">
+<div class="compare-row compare-hdr"><span class="c-hotel">酒店</span><span class="c-style">风格</span><span class="c-price">价格</span></div>
+<a class="c-link" href="#amanpuri"><span class="c-hotel">安缦璞瑞</span><span class="c-style">避世禅意</span><span class="c-price">8,000-15,000</span></a>
+<a class="c-link" href="#rosewood"><span class="c-hotel">普吉瑰丽</span><span class="c-style">现代奢华</span><span class="c-price">6,000-12,000</span></a>
+<div class="compare-row active"><span class="c-hotel">✦ 悦榕庄</span><span class="c-style">东南亚度假</span><span class="c-price">4,000-8,000</span></div>
+</div>
+</div>
+<a class="detail-back" href="#home-page" style="display:block;text-align:center;margin:20px auto 0;width:fit-content;color:#b8860b;border:1px solid #d4af37;background:none;">← 返回酒店列表</a>
+</div>
+</div>
+
+<!-- 六善 -->
+<div id="sixsenses" class="detail-page">
+<div class="detail-header" style="background:linear-gradient(135deg,#1a2a1f,#3d5c3d,#6b8f6b,#2a4030);">
+<a class="detail-back" href="#home-page">← 返回列表</a>
+<div class="name">苏梅岛六善</div>
+<div class="name-en">Six Senses Samui · 苏梅岛 Koh Samui</div>
+<div class="detail-badge" style="background:#abcaab;color:#1a2a1f;">🔥 3天2晚 · 6折优惠</div>
+</div>
+<div class="container detail-body">
+<div class="info-card">
+<input type="checkbox" id="s1" class="info-expand" checked>
+<label class="info-header" for="s1"><span class="icon">📍</span><span class="title">位置与交通</span><span class="arrow">▼</span></label>
+<div class="info-content"><p>位于苏梅岛北端悬崖之上，占地20英亩，被热带雨林包裹。距苏梅机场仅15分钟车程。</p></div>
+</div>
+<div class="info-card">
+<label class="info-header"><span class="icon">📊</span><span class="title">同城对比</span></label>
+<div class="compare-table">
+<div class="compare-row compare-hdr"><span class="c-hotel">酒店</span><span class="c-style">风格</span><span class="c-price">价格</span></div>
+<div class="compare-row active"><span class="c-hotel">✦ 六善</span><span class="c-style">原木自然</span><span class="c-price">5,000-10,000</span></div>
+<a class="c-link" href="#wsamui"><span class="c-hotel">W苏梅岛</span><span class="c-style">时尚派对</span><span class="c-price">4,500-9,000</span></a>
+</div>
+</div>
+<a class="detail-back" href="#home-page" style="display:block;text-align:center;margin:20px auto 0;width:fit-content;color:#b8860b;border:1px solid #d4af37;background:none;">← 返回酒店列表</a>
+</div>
+</div>
+
+<!-- W酒店 -->
+<div id="wsamui" class="detail-page">
+<div class="detail-header" style="background:linear-gradient(135deg,#1a0a2e,#4a1a6e,#e6197a,#0a0a1a);">
+<a class="detail-back" href="#home-page">← 返回列表</a>
+<div class="name">苏梅岛W酒店</div>
+<div class="name-en">W Koh Samui · 苏梅岛 Koh Samui</div>
+<div class="detail-badge" style="background:#e6197a;color:#fff;">🔥 3天2晚 · 6折优惠</div>
+</div>
+<div class="container detail-body">
+<div class="info-card">
+<input type="checkbox" id="w1" class="info-expand" checked>
+<label class="info-header" for="w1"><span class="icon">📍</span><span class="title">位置与交通</span><span class="arrow">▼</span></label>
+<div class="info-content"><p>位于苏梅岛湄南海滩（Mae Nam Beach），距机场20分钟车程。位置安静但去查汶夜市和渔人村都很方便。</p></div>
+</div>
+<div class="info-card">
+<label class="info-header"><span class="icon">📊</span><span class="title">同城对比</span></label>
+<div class="compare-table">
+<div class="compare-row compare-hdr"><span class="c-hotel">酒店</span><span class="c-style">风格</span><span class="c-price">价格</span></div>
+<a class="c-link" href="#sixsenses"><span class="c-hotel">六善</span><span class="c-style">原木自然</span><span class="c-price">5,000-10,000</span></a>
+<div class="compare-row active"><span class="c-hotel">✦ W苏梅岛</span><span class="c-style">时尚派对</span><span class="c-price">4,500-9,000</span></div>
+</div>
+</div>
+<a class="detail-back" href="#home-page" style="display:block;text-align:center;margin:20px auto 0;width:fit-content;color:#b8860b;border:1px solid #d4af37;background:none;">← 返回酒店列表</a>
+</div>
+</div>
+
+<!-- 曼谷文华东方 -->
+<div id="mandarin" class="detail-page">
+<div class="detail-header" style="background:linear-gradient(135deg,#2a2520,#5a5045,#d4c5a0,#3a3530);">
+<a class="detail-back" href="#home-page">← 返回列表</a>
+<div class="name">曼谷文华东方</div>
+<div class="name-en">Mandarin Oriental Bangkok · 曼谷 Bangkok</div>
+<div class="detail-badge" style="background:#d4c5a0;color:#2a2520;">🔥 3天2晚 · 6折优惠</div>
+</div>
+<div class="container detail-body">
+<div class="info-card">
+<input type="checkbox" id="m1" class="info-expand" checked>
+<label class="info-header" for="m1"><span class="icon">📍</span><span class="title">位置与交通</span><span class="arrow">▼</span></label>
+<div class="info-content"><p>坐落在湄南河畔，曼谷核心地段。距素万那普机场40分钟车程，距BTS Saphan Taksin站步行10分钟。</p></div>
+</div>
+<div class="info-card">
+<label class="info-header"><span class="icon">📊</span><span class="title">同城对比</span></label>
+<div class="compare-table">
+<div class="compare-row compare-hdr"><span class="c-hotel">酒店</span><span class="c-style">风格</span><span class="c-price">价格</span></div>
+<div class="compare-row active"><span class="c-hotel">✦ 文华东方</span><span class="c-style">殖民经典</span><span class="c-price">6,000-15,000</span></div>
+<a class="c-link" href="#capella"><span class="c-hotel">嘉佩乐</span><span class="c-style">现代极简</span><span class="c-price">7,000-14,000</span></a>
+<a class="c-link" href="#fsbangkok"><span class="c-hotel">曼谷四季</span><span class="c-style">大气稳重</span><span class="c-price">5,000-10,000</span></a>
+<a class="c-link" href="#peninsula"><span class="c-hotel">半岛</span><span class="c-style">东方优雅</span><span class="c-price">5,000-12,000</span></a>
+<a class="c-link" href="#waldorf"><span class="c-hotel">华尔道夫</span><span class="c-style">美式奢华</span><span class="c-price">4,000-8,000</span></a>
+</div>
+</div>
+<a class="detail-back" href="#home-page" style="display:block;text-align:center;margin:20px auto 0;width:fit-content;color:#b8860b;border:1px solid #d4af37;background:none;">← 返回酒店列表</a>
+</div>
+</div>
+
+<!-- 嘉佩乐 -->
+<div id="capella" class="detail-page">
+<div class="detail-header" style="background:linear-gradient(135deg,#1f1f1f,#4a4a4a,#8a8a7a,#2a2a2a);">
+<a class="detail-back" href="#home-page">← 返回列表</a>
+<div class="name">曼谷嘉佩乐</div>
+<div class="name-en">Capella Bangkok · 曼谷 Bangkok</div>
+<div class="detail-badge" style="background:#c0c0b0;color:#1f1f1f;">🔥 3天2晚 · 6折优惠</div>
+</div>
+<div class="container detail-body">
+<div class="info-card">
+<input type="checkbox" id="c1" class="info-expand" checked>
+<label class="info-header" for="c1"><span class="icon">📍</span><span class="title">位置与交通</span><span class="arrow">▼</span></label>
+<div class="info-content"><p>位于湄南河畔Charoenkrung路，曼谷最古老的街区之一。距BTS站步行15分钟。</p></div>
+</div>
+<div class="info-card">
+<label class="info-header"><span class="icon">📊</span><span class="title">同城对比</span></label>
+<div class="compare-table">
+<div class="compare-row compare-hdr"><span class="c-hotel">酒店</span><span class="c-style">风格</span><span class="c-price">价格</span></div>
+<a class="c-link" href="#mandarin"><span class="c-hotel">文华东方</span><span class="c-style">殖民经典</span><span class="c-price">6,000-15,000</span></a>
+<div class="compare-row active"><span class="c-hotel">✦ 嘉佩乐</span><span class="c-style">现代极简</span><span class="c-price">7,000-14,000</span></div>
+<a class="c-link" href="#fsbangkok"><span class="c-hotel">曼谷四季</span><span class="c-style">大气稳重</span><span class="c-price">5,000-10,000</span></a>
+<a class="c-link" href="#peninsula"><span class="c-hotel">半岛</span><span class="c-style">东方优雅</span><span class="c-price">5,000-12,000</span></a>
+<a class="c-link" href="#waldorf"><span class="c-hotel">华尔道夫</span><span class="c-style">美式奢华</span><span class="c-price">4,000-8,000</span></a>
+</div>
+</div>
+<a class="detail-back" href="#home-page" style="display:block;text-align:center;margin:20px auto 0;width:fit-content;color:#b8860b;border:1px solid #d4af37;background:none;">← 返回酒店列表</a>
+</div>
+</div>
+
+<!-- 曼谷四季 -->
+<div id="fsbangkok" class="detail-page">
+<div class="detail-header" style="background:linear-gradient(135deg,#0a1628,#1a3050,#2a5080,#0f1f35);">
+<a class="detail-back" href="#home-page">← 返回列表</a>
+<div class="name">曼谷四季</div>
+<div class="name-en">Four Seasons Bangkok · 曼谷 Bangkok</div>
+<div class="detail-badge" style="background:#a0c0e0;color:#0a1628;">🔥 3天2晚 · 6折优惠</div>
+</div>
+<div class="container detail-body">
+<div class="info-card">
+<input type="checkbox" id="f1" class="info-expand" checked>
+<label class="info-header" for="f1"><span class="icon">📍</span><span class="title">位置与交通</span><span class="arrow">▼</span></label>
+<div class="info-content"><p>湄南河畔，与嘉佩乐相邻，共享Charoenkrung街区的便利。距BTS站步行15分钟，酒店提供免费接驳船。</p></div>
+</div>
+<div class="info-card">
+<label class="info-header"><span class="icon">📊</span><span class="title">同城对比</span></label>
+<div class="compare-table">
+<div class="compare-row compare-hdr"><span class="c-hotel">酒店</span><span class="c-style">风格</span><span class="c-price">价格</span></div>
+<a class="c-link" href="#mandarin"><span class="c-hotel">文华东方</span><span class="c-style">殖民经典</span><span class="c-price">6,000-15,000</span></a>
+<a class="c-link" href="#capella"><span class="c-hotel">嘉佩乐</span><span class="c-style">现代极简</span><span class="c-price">7,000-14,000</span></a>
+<div class="compare-row active"><span class="c-hotel">✦ 曼谷四季</span><span class="c-style">大气稳重</span><span class="c-price">5,000-10,000</span></div>
+<a class="c-link" href="#peninsula"><span class="c-hotel">半岛</span><span class="c-style">东方优雅</span><span class="c-price">5,000-12,000</span></a>
+<a class="c-link" href="#waldorf"><span class="c-hotel">华尔道夫</span><span class="c-style">美式奢华</span><span class="c-price">4,000-8,000</span></a>
+</div>
+</div>
+<a class="detail-back" href="#home-page" style="display:block;text-align:center;margin:20px auto 0;width:fit-content;color:#b8860b;border:1px solid #d4af37;background:none;">← 返回酒店列表</a>
+</div>
+</div>
+
+<!-- 半岛 -->
+<div id="peninsula" class="detail-page">
+<div class="detail-header" style="background:linear-gradient(135deg,#1a1018,#4a2030,#8b3040,#2a1820);">
+<a class="detail-back" href="#home-page">← 返回列表</a>
+<div class="name">曼谷半岛</div>
+<div class="name-en">The Peninsula Bangkok · 曼谷 Bangkok</div>
+<div class="detail-badge" style="background:#d4af37;color:#1a1018;">🔥 3天2晚 · 6折优惠</div>
+</div>
+<div class="container detail-body">
+<div class="info-card">
+<input type="checkbox" id="p1" class="info-expand" checked>
+<label class="info-header" for="p1"><span class="icon">📍</span><span class="title">位置与交通</span><span class="arrow">▼</span></label>
+<div class="info-content"><p>湄南河西岸，位置相对安静但紧邻吞武里区域。提供免费接驳船至对岸的BTS站。</p></div>
+</div>
+<div class="info-card">
+<label class="info-header"><span class="icon">📊</span><span class="title">同城对比</span></label>
+<div class="compare-table">
+<div class="compare-row compare-hdr"><span class="c-hotel">酒店</span><span class="c-style">风格</span><span class="c-price">价格</span></div>
+<a class="c-link" href="#mandarin"><span class="c-hotel">文华东方</span><span class="c-style">殖民经典</span><span class="c-price">6,000-15,000</span></a>
+<a class="c-link" href="#capella"><span class="c-hotel">嘉佩乐</span><span class="c-style">现代极简</span><span class="c-price">7,000-14,000</span></a>
+<a class="c-link" href="#fsbangkok"><span class="c-hotel">曼谷四季</span><span class="c-style">大气稳重</span><span class="c-price">5,000-10,000</span></a>
+<div class="compare-row active"><span class="c-hotel">✦ 半岛</span><span class="c-style">东方优雅</span><span class="c-price">5,000-12,000</span></div>
+<a class="c-link" href="#waldorf"><span class="c-hotel">华尔道夫</span><span class="c-style">美式奢华</span><span class="c-price">4,000-8,000</span></a>
+</div>
+</div>
+<a class="detail-back" href="#home-page" style="display:block;text-align:center;margin:20px auto 0;width:fit-content;color:#b8860b;border:1px solid #d4af37;background:none;">← 返回酒店列表</a>
+</div>
+</div>
+
+<!-- 华尔道夫 -->
+<div id="waldorf" class="detail-page">
+<div class="detail-header" style="background:linear-gradient(135deg,#0a0a0a,#2a2a2a,#5a4a30,#1a1a1a);">
+<a class="detail-back" href="#home-page">← 返回列表</a>
+<div class="name">曼谷华尔道夫</div>
+<div class="name-en">Waldorf Astoria Bangkok · 曼谷 Bangkok</div>
+<div class="detail-badge" style="background:#d4af37;color:#0a0a0a;">🔥 3天2晚 · 6折优惠</div>
+</div>
+<div class="container detail-body">
+<div class="info-card">
+<input type="checkbox" id="wa1" class="info-expand" checked>
+<label class="info-header" for="wa1"><span class="icon">📍</span><span class="title">位置与交通</span><span class="arrow">▼</span></label>
+<div class="info-content"><p>位于曼谷市中心Ratchaprasong商圈核心，四面佛旁边。BTS Chit Lom站步行3分钟，Central World、Siam Paragon都在步行范围内。</p></div>
+</div>
+<div class="info-card">
+<label class="info-header"><span class="icon">📊</span><span class="title">同城对比</span></label>
+<div class="compare-table">
+<div class="compare-row compare-hdr"><span class="c-hotel">酒店</span><span class="c-style">风格</span><span class="c-price">价格</span></div>
+<a class="c-link" href="#mandarin"><span class="c-hotel">文华东方</span><span class="c-style">殖民经典</span><span class="c-price">6,000-15,000</span></a>
+<a class="c-link" href="#capella"><span class="c-hotel">嘉佩乐</span><span class="c-style">现代极简</span><span class="c-price">7,000-14,000</span></a>
+<a class="c-link" href="#fsbangkok"><span class="c-hotel">曼谷四季</span><span class="c-style">大气稳重</span><span class="c-price">5,000-10,000</span></a>
+<a class="c-link" href="#peninsula"><span class="c-hotel">半岛</span><span class="c-style">东方优雅</span><span class="c-price">5,000-12,000</span></a>
+<div class="compare-row active"><span class="c-hotel">✦ 华尔道夫</span><span class="c-style">美式奢华</span><span class="c-price">4,000-8,000</span></div>
+</div>
+</div>
+<a class="detail-back" href="#home-page" style="display:block;text-align:center;margin:20px auto 0;width:fit-content;color:#b8860b;border:1px solid #d4af37;background:none;">← 返回酒店列表</a>
+</div>
+</div>
+
+<!-- 清迈四季 -->
+<div id="fschiangmai" class="detail-page">
+<div class="detail-header" style="background:linear-gradient(135deg,#1a3018,#3a6a30,#6aaa4a,#2a5028);">
+<a class="detail-back" href="#home-page">← 返回列表</a>
+<div class="name">清迈四季</div>
+<div class="name-en">Four Seasons Chiang Mai · 清迈 Chiang Mai</div>
+<div class="detail-badge" style="background:#90d890;color:#1a3018;">🔥 3天2晚 · 6折优惠</div>
+</div>
+<div class="container detail-body">
+<div class="info-card">
+<input type="checkbox" id="fm1" class="info-expand" checked>
+<label class="info-header" for="fm1"><span class="icon">📍</span><span class="title">位置与交通</span><span class="arrow">▼</span></label>
+<div class="info-content"><p>位于清迈湄林谷（Mae Rim Valley），距清迈古城30分钟车程。远离古城喧嚣，被热带山林和稻田环绕。</p></div>
+</div>
+<div class="info-card">
+<label class="info-header"><span class="icon">📊</span><span class="title">同城对比</span></label>
+<div class="compare-table">
+<div class="compare-row compare-hdr"><span class="c-hotel">酒店</span><span class="c-style">风格</span><span class="c-price">价格</span></div>
+<div class="compare-row active"><span class="c-hotel">✦ 清迈四季</span><span class="c-style">田园泰式</span><span class="c-price">3,500-7,000</span></div>
+</div>
+</div>
+<a class="detail-back" href="#home-page" style="display:block;text-align:center;margin:20px auto 0;width:fit-content;color:#b8860b;border:1px solid #d4af37;background:none;">← 返回酒店列表</a>
+</div>
+</div>
+
+</body>
+</html>
