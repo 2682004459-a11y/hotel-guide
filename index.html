@@ -21,10 +21,10 @@ body{background:#f5f3ef;font-family:'PingFang SC','Microsoft YaHei','-apple-syst
 
 
 /* Hotel images */
-.hotel-link{display:flex;gap:12px;align-items:center;background:#fff;border-radius:12px;padding:10px;margin:8px 0;box-shadow:0 1px 6px rgba(0,0,0,0.05);border:1px solid #eee;color:#333;text-decoration:none;transition:all 0.15s;position:relative;overflow:hidden;}
+.hotel-link{display:block;background:#fff;border-radius:12px;margin:8px 0;box-shadow:0 1px 6px rgba(0,0,0,0.05);border:1px solid #eee;color:#333;text-decoration:none;transition:all 0.15s;position:relative;overflow:hidden;}
 .hotel-link:active{background:#f5f3ef;transform:scale(0.98);}
-.hotel-img{width:75px;height:75px;border-radius:10px;object-fit:cover;flex-shrink:0;}
-.hotel-info{flex:1;}
+.hotel-img{width:100%;height:140px;object-fit:cover;display:block;}
+
 .detail-img{width:100%;height:180px;object-fit:cover;border-radius:12px;margin-bottom:12px;}
 .hotel-link:active{background:#f5f3ef;transform:scale(0.98);}
 .hotel-link .name{font-size:17px;font-weight:600;}
@@ -100,8 +100,8 @@ body{background:#f5f3ef;font-family:'PingFang SC','Microsoft YaHei','-apple-syst
 <div class="section-title">📍 普吉岛</div>
 
 <a class="hotel-link" href="#amanpuri">
-  <img class="hotel-img" src="https://loremflickr.com/150/150/phuket,resort,pool" alt="安缦璞瑞" loading="lazy">
-  <div class="hotel-info">
+  <img class="hotel-img" src="https://picsum.photos/seed/amanpuri/150/150" alt="安缦璞瑞" loading="lazy">
+  <div style="padding:8px 12px 12px">
   <div class="name">安缦璞瑞</div>
   <div class="name-en">Amanpuri</div>
   <div class="tags"><span class="tag">避世禅意</span><span class="tag">安缦朝圣</span><span class="tag">私人海滩</span></div>
@@ -109,8 +109,8 @@ body{background:#f5f3ef;font-family:'PingFang SC','Microsoft YaHei','-apple-syst
 </a>
 
 <a class="hotel-link" href="#rosewood">
-  <img class="hotel-img" src="https://loremflickr.com/150/150/phuket,luxury,hotel" alt="普吉瑰丽" loading="lazy">
-  <div class="hotel-info">
+  <img class="hotel-img" src="https://picsum.photos/seed/rosewood/150/150" alt="普吉瑰丽" loading="lazy">
+  <div style="padding:8px 12px 12px">
   <div class="name">普吉瑰丽</div>
   <div class="name-en">Rosewood Phuket</div>
   <div class="tags"><span class="tag">现代奢华</span><span class="tag">设计师酒店</span><span class="tag">翡翠湾</span></div>
@@ -118,8 +118,8 @@ body{background:#f5f3ef;font-family:'PingFang SC','Microsoft YaHei','-apple-syst
 </a>
 
 <a class="hotel-link" href="#banyan">
-  <img class="hotel-img" src="https://loremflickr.com/150/150/phuket,spa,resort" alt="普吉悦榕庄" loading="lazy">
-  <div class="hotel-info">
+  <img class="hotel-img" src="https://picsum.photos/seed/banyan/150/150" alt="普吉悦榕庄" loading="lazy">
+  <div style="padding:8px 12px 12px">
   <div class="name">普吉悦榕庄</div>
   <div class="name-en">Banyan Tree Phuket</div>
   <div class="tags"><span class="tag">东南亚度假</span><span class="tag">私密别墅</span><span class="tag">性价比</span></div>
@@ -131,8 +131,8 @@ body{background:#f5f3ef;font-family:'PingFang SC','Microsoft YaHei','-apple-syst
 <div class="section-title">📍 苏梅岛</div>
 
 <a class="hotel-link" href="#sixsenses">
-  <img class="hotel-img" src="https://loremflickr.com/150/150/samui,resort,nature" alt="苏梅岛六善" loading="lazy">
-  <div class="hotel-info">
+  <img class="hotel-img" src="https://picsum.photos/seed/sixsenses/150/150" alt="苏梅岛六善" loading="lazy">
+  <div style="padding:8px 12px 12px">
   <div class="name">苏梅岛六善</div>
   <div class="name-en">Six Senses Samui</div>
   <div class="tags"><span class="tag">原木自然</span><span class="tag">避世养生</span><span class="tag">悬崖海景</span></div>
@@ -140,8 +140,8 @@ body{background:#f5f3ef;font-family:'PingFang SC','Microsoft YaHei','-apple-syst
 </a>
 
 <a class="hotel-link" href="#wsamui">
-  <img class="hotel-img" src="https://loremflickr.com/150/150/samui,hotel,modern" alt="苏梅岛W酒店" loading="lazy">
-  <div class="hotel-info">
+  <img class="hotel-img" src="https://picsum.photos/seed/wsamui/150/150" alt="苏梅岛W酒店" loading="lazy">
+  <div style="padding:8px 12px 12px">
   <div class="name">苏梅岛W酒店</div>
   <div class="name-en">W Koh Samui</div>
   <div class="tags"><span class="tag">潮流时尚</span><span class="tag">派对氛围</span><span class="tag">年轻人</span></div>
@@ -153,8 +153,8 @@ body{background:#f5f3ef;font-family:'PingFang SC','Microsoft YaHei','-apple-syst
 <div class="section-title">📍 曼谷</div>
 
 <a class="hotel-link" href="#mandarin">
-  <img class="hotel-img" src="https://loremflickr.com/150/150/bangkok,hotel,classic" alt="曼谷文华东方" loading="lazy">
-  <div class="hotel-info">
+  <img class="hotel-img" src="https://picsum.photos/seed/mandarin/150/150" alt="曼谷文华东方" loading="lazy">
+  <div style="padding:8px 12px 12px">
   <div class="name">曼谷文华东方</div>
   <div class="name-en">Mandarin Oriental Bangkok</div>
   <div class="tags"><span class="tag">百年经典</span><span class="tag">殖民风情</span><span class="tag">湄南河</span></div>
@@ -162,8 +162,8 @@ body{background:#f5f3ef;font-family:'PingFang SC','Microsoft YaHei','-apple-syst
 </a>
 
 <a class="hotel-link" href="#capella">
-  <img class="hotel-img" src="https://loremflickr.com/150/150/bangkok,luxury,hotel" alt="曼谷嘉佩乐" loading="lazy">
-  <div class="hotel-info">
+  <img class="hotel-img" src="https://picsum.photos/seed/capella/150/150" alt="曼谷嘉佩乐" loading="lazy">
+  <div style="padding:8px 12px 12px">
   <div class="name">曼谷嘉佩乐</div>
   <div class="name-en">Capella Bangkok</div>
   <div class="tags"><span class="tag">现代极简</span><span class="tag">顶级新贵</span><span class="tag">湄南河</span></div>
@@ -171,8 +171,8 @@ body{background:#f5f3ef;font-family:'PingFang SC','Microsoft YaHei','-apple-syst
 </a>
 
 <a class="hotel-link" href="#fsbangkok">
-  <img class="hotel-img" src="https://loremflickr.com/150/150/bangkok,resort,pool" alt="曼谷四季" loading="lazy">
-  <div class="hotel-info">
+  <img class="hotel-img" src="https://picsum.photos/seed/fsbangkok/150/150" alt="曼谷四季" loading="lazy">
+  <div style="padding:8px 12px 12px">
   <div class="name">曼谷四季</div>
   <div class="name-en">Four Seasons Bangkok</div>
   <div class="tags"><span class="tag">现代奢华</span><span class="tag">大气稳重</span><span class="tag">河畔</span></div>
@@ -180,8 +180,8 @@ body{background:#f5f3ef;font-family:'PingFang SC','Microsoft YaHei','-apple-syst
 </a>
 
 <a class="hotel-link" href="#peninsula">
-  <img class="hotel-img" src="https://loremflickr.com/150/150/bangkok,river,hotel" alt="曼谷半岛" loading="lazy">
-  <div class="hotel-info">
+  <img class="hotel-img" src="https://picsum.photos/seed/peninsula/150/150" alt="曼谷半岛" loading="lazy">
+  <div style="padding:8px 12px 12px">
   <div class="name">曼谷半岛</div>
   <div class="name-en">The Peninsula Bangkok</div>
   <div class="tags"><span class="tag">东方优雅</span><span class="tag">经典奢华</span><span class="tag">河景</span></div>
@@ -189,8 +189,8 @@ body{background:#f5f3ef;font-family:'PingFang SC','Microsoft YaHei','-apple-syst
 </a>
 
 <a class="hotel-link" href="#waldorf">
-  <img class="hotel-img" src="https://loremflickr.com/150/150/bangkok,skyline,hotel" alt="曼谷华尔道夫" loading="lazy">
-  <div class="hotel-info">
+  <img class="hotel-img" src="https://picsum.photos/seed/waldorf/150/150" alt="曼谷华尔道夫" loading="lazy">
+  <div style="padding:8px 12px 12px">
   <div class="name">曼谷华尔道夫</div>
   <div class="name-en">Waldorf Astoria Bangkok</div>
   <div class="tags"><span class="tag">美式奢华</span><span class="tag">高空城景</span><span class="tag">市中心</span></div>
@@ -202,8 +202,8 @@ body{background:#f5f3ef;font-family:'PingFang SC','Microsoft YaHei','-apple-syst
 <div class="section-title">📍 清迈</div>
 
 <a class="hotel-link" href="#fschiangmai">
-  <img class="hotel-img" src="https://loremflickr.com/150/150/chiang,mai,rice,field" alt="清迈四季" loading="lazy">
-  <div class="hotel-info">
+  <img class="hotel-img" src="https://picsum.photos/seed/fschiangmai/150/150" alt="清迈四季" loading="lazy">
+  <div style="padding:8px 12px 12px">
   <div class="name">清迈四季</div>
   <div class="name-en">Four Seasons Chiang Mai</div>
   <div class="tags"><span class="tag">田园泰式</span><span class="tag">稻田泳池</span><span class="tag">清幽避世</span></div>
