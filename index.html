@@ -1,608 +1,260 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html>
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-<title>泰国顶奢酒店手册</title>
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>高端酒店促销手册</title>
 <style>
 *{margin:0;padding:0;box-sizing:border-box;}
-body{background:#f5f3ef;font-family:'PingFang SC','Microsoft YaHei','-apple-system',sans-serif;color:#333;-webkit-tap-highlight-color:transparent;}
+body{background:#f5f3ef;font-family:-apple-system,'PingFang SC','Microsoft YaHei',sans-serif;color:#333;padding-bottom:60px;}
+.hd{background:linear-gradient(135deg,#1a1a2e,#16213e);color:#d4af37;padding:30px 15px;text-align:center;}
+.hd h1{font-size:22px;font-weight:300;letter-spacing:3px;}
+.hd p{color:#a09070;font-size:11px;margin-top:4px;letter-spacing:2px;}
+.sb{padding:10px 15px;}
+.sb input{width:100%;padding:10px 14px;border:2px solid #e0d8c8;border-radius:25px;font-size:14px;outline:none;background:#fff;transition:border .3s;}
+.sb input:focus{border-color:#d4af37;box-shadow:0 0 0 2px rgba(212,175,55,0.1);}
+.nav{overflow-x:auto;white-space:nowrap;padding:5px 15px;-webkit-overflow-scrolling:touch;}
+.nav a{display:inline-block;padding:6px 16px;margin:2px 3px;background:#fff;border:1px solid #e0d8c8;border-radius:20px;font-size:12px;color:#8a7a5a;text-decoration:none;cursor:pointer;transition:all .2s;}
+.nav a:hover{background:#d4af37;color:#fff;border-color:#d4af37;}
+.pd{padding:0 15px;}
+.rg{margin-bottom:14px;}
+.rth{background:#fff;border-radius:12px;padding:14px 16px;font-size:17px;font-weight:600;color:#1a1a2e;display:flex;justify-content:space-between;align-items:center;border-left:5px solid #d4af37;cursor:pointer;box-shadow:0 2px 10px rgba(0,0,0,0.04);}
+.rth .ar{font-size:12px;color:#d4af37;transition:transform .3s;}
+.rth .ar.on{transform:rotate(180deg);}
+.rb{display:none;padding:8px 0 0 10px;}
+.rb.on{display:block;}
+.cth{padding:10px 16px;font-size:14px;color:#333;background:#fff;border-radius:8px;margin:6px 0 4px;cursor:pointer;display:flex;justify-content:space-between;align-items:center;font-weight:500;border-left:4px solid #d4af37;border-top:1px solid #e8e0d0;border-right:1px solid #e8e0d0;border-bottom:1px solid #e8e0d0;}
+.cth span{color:#bbb;font-size:11px;}
+.cb{display:none;padding-left:8px;}
+.cb.on{display:block;}
+.hc{background:#fff;border-radius:8px;margin-bottom:5px;overflow:hidden;box-shadow:0 1px 4px rgba(0,0,0,0.04);border:1px solid #e8e0d0;transition:box-shadow .2s;}
+.hc:hover{box-shadow:0 2px 8px rgba(0,0,0,0.06);}
+.ht{padding:10px 14px;display:flex;justify-content:space-between;align-items:center;cursor:pointer;transition:background .2s;}
+.ht:active{background:#f5f3ef;}
+.hn{display:flex;align-items:center;gap:8px;}
+.hn-text{font-size:14px;font-weight:500;color:#333;}
+.hn-en{font-size:10px;color:#aaa;font-weight:400;display:block;margin-top:1px;}
+.hn-logo{width:18px;height:18px;object-fit:contain;}
+.ht-icon{color:#d4af37;font-size:16px;transition:transform .3s;}
+.hb{display:none;padding:0 14px 10px;border-top:1px solid #f0ede6;}
+.hb.on{display:block;}
+.pr{background:#f8f6f2;padding:5px 10px;margin:3px 0;border-radius:6px;font-size:11px;border-left:3px solid #d4af37;color:#555;line-height:1.5;}
+.pr em{display:block;font-style:normal;color:#999;font-size:10px;margin-top:1px;}
+.tg{display:inline-block;font-size:9px;padding:3px 8px;border-radius:10px;background:linear-gradient(135deg,#d4af37,#b8923d);color:#fff;margin-right:4px;font-weight:500;}
+.sv{background:linear-gradient(135deg,#fff7e6,#ffefd0);border:1px solid #e8d5a0;border-radius:6px;padding:3px 8px;font-size:10px;color:#a08030;display:inline-block;margin:3px 0;font-weight:600;}
+.mp{display:inline-block;padding:4px 10px;border:1px solid #d4af37;border-radius:6px;color:#b8923d;font-size:10px;text-decoration:none;margin:3px 0;transition:all .2s;}
+.mp:hover{background:#d4af37;color:#fff;}
+.pc{font-size:10px;color:#bbb;margin:4px 0;}
+.ct{position:fixed;bottom:0;left:0;right:0;background:linear-gradient(135deg,#1a1a2e,#16213e);padding:8px 15px;display:flex;justify-content:center;align-items:center;gap:8px;}
+.ct span{color:#a09070;font-size:11px;}
+.ct a{background:#d4af37;color:#1a1a2e;padding:7px 24px;border-radius:20px;text-decoration:none;font-size:12px;font-weight:bold;transition:background .2s;}
+.ct a:hover{background:#e8c84a;}
+.sm{text-align:center;padding:40px;color:#aaa;display:none;font-size:14px;}
+.hotb{background:linear-gradient(135deg,#fff9ed,#fff);border:1.5px solid #e8d5a0;border-radius:12px;padding:12px;margin-bottom:14px;}
+.hott{font-size:13px;font-weight:600;color:#d4af37;margin-bottom:8px;letter-spacing:1px;}
+.hotg{display:flex;gap:6px;flex-wrap:wrap;}
+.hti{background:#fff;border-radius:8px;padding:8px 10px;flex:1;min-width:80px;text-align:center;font-size:11px;font-weight:500;color:#333;border:1px solid #e8d0b0;cursor:pointer;}
 
-.header{background:linear-gradient(135deg,#0f0f1a,#1a1a2e);color:#d4af37;padding:48px 20px 36px;text-align:center;}
-.header h1{font-size:30px;font-weight:300;letter-spacing:6px;margin-bottom:4px;}
-.header .sub{color:#a09070;font-size:14px;letter-spacing:3px;}
-.header .badge{display:inline-block;background:#d4af37;color:#1a1a2e;padding:8px 24px;border-radius:20px;font-size:14px;margin-top:16px;font-weight:bold;}
-
-.container{max-width:600px;margin:0 auto;padding:16px;}
-
-/* Home page sections */
-.section{padding:12px 0;}
-.section-title{font-size:20px;color:#1a1a2e;font-weight:600;padding:12px 4px 8px;border-bottom:2px solid #d4af37;letter-spacing:3px;display:flex;align-items:center;gap:6px;}
-
-.hotel-link{display:block;background:#fff;border-radius:12px;padding:14px 16px;margin:8px 0;box-shadow:0 1px 6px rgba(0,0,0,0.05);border:1px solid #eee;color:#333;text-decoration:none;transition:all 0.15s;position:relative;overflow:hidden;}
-.hotel-link:active{background:#f5f3ef;transform:scale(0.98);}
-.hotel-link .name{font-size:17px;font-weight:600;}
-.hotel-link .name-en{font-size:12px;color:#a09070;margin:1px 0 4px;}
-.hotel-link .tags{display:flex;gap:4px;flex-wrap:wrap;margin:4px 0;}
-.hotel-link .tag{background:#f5f0e8;color:#6a5a3a;padding:2px 8px;border-radius:6px;font-size:11px;}
-.hotel-link .price{font-size:13px;color:#b8860b;font-weight:500;}
-
-/* Detail pages */
-.detail-page{display:none;}
-.detail-page:target{display:block;}
-.detail-page:target ~ #home-page{display:none;}
-#home-page{display:block;}
-
-.detail-header{padding:40px 20px 24px;color:#fff;position:relative;border-radius:0 0 20px 20px;margin:0 0 12px;}
-.detail-back{display:inline-block;color:rgba(255,255,255,0.8);text-decoration:none;font-size:16px;margin-bottom:12px;padding:6px 12px;border-radius:8px;background:rgba(255,255,255,0.1);}
-.detail-header .name{font-size:24px;font-weight:600;}
-.detail-header .name-en{font-size:14px;color:rgba(255,255,255,0.7);padding:2px 0 6px;}
-.detail-badge{display:inline-block;padding:5px 14px;border-radius:12px;font-size:12px;font-weight:bold;margin-top:6px;}
-
-.detail-body{padding:0 0 48px;}
-
-.info-card{background:#fff;border-radius:12px;margin:8px 0;box-shadow:0 1px 6px rgba(0,0,0,0.04);border:1px solid #eee;overflow:hidden;}
-.info-header{display:flex;align-items:center;gap:8px;padding:12px 14px;cursor:pointer;}
-.info-header .icon{font-size:18px;}
-.info-header .title{font-size:15px;font-weight:600;flex:1;}
-.info-header .arrow{transition:transform 0.2s;color:#a09070;font-size:16px;}
-.info-content{max-height:0;overflow:hidden;transition:max-height 0.3s;padding:0 14px;}
-.info-expand{display:none;}
-.info-expand:checked ~ .info-content{max-height:2000px;padding:0 14px 14px;}
-.info-expand:checked ~ .info-header .arrow{transform:rotate(180deg);}
-.info-content p{font-size:14px;color:#555;line-height:1.7;margin-bottom:4px;}
-
-.sub-section{margin-top:8px;background:#f9f6f0;border-radius:8px;border:1px solid #e8dcc8;overflow:hidden;}
-.sub-toggle{display:none;}
-.sub-toggle:checked ~ .sub-content{max-height:1000px;padding:10px 12px 12px;border-top:1px solid #e8dcc8;}
-.sub-label{display:block;padding:10px 12px;font-size:13px;color:#1a1a2e;cursor:pointer;position:relative;}
-.sub-label:after{content:'+';float:right;color:#d4af37;font-size:16px;font-weight:bold;}
-.sub-toggle:checked ~ .sub-label:after{content:'−';}
-.sub-content{max-height:0;overflow:hidden;padding:0 12px;font-size:13px;color:#555;line-height:1.6;transition:all 0.25s;}
-
-/* Comparison table */
-.compare-table{margin:12px 0;border-radius:10px;overflow:hidden;border:1px solid #eee;}
-.compare-row{display:flex;padding:10px 12px;border-bottom:1px solid #f0f0f0;background:#fff;}
-.compare-row:last-child{border-bottom:none;}
-.compare-row.active{background:#faf6ef;}
-.compare-hdr{background:#1a1a2e;padding:10px 12px;}
-.compare-hdr span{color:#d4af37;font-weight:400;font-size:13px;}
-.c-hotel{flex:2;font-size:13px;font-weight:500;color:#1a1a2e;}
-.c-style{flex:1.5;font-size:12px;color:#777;}
-.c-price{flex:1;font-size:12px;color:#b8860b;text-align:right;}
-.c-link{text-decoration:none;color:inherit;display:flex;padding:10px 12px;border-bottom:1px solid #f0f0f0;background:#fff;}
-
-.footer{text-align:center;padding:32px 20px 48px;}
-.footer .logo{color:#d4af37;font-size:16px;letter-spacing:6px;}
-.footer p{color:#a09070;font-size:13px;margin-top:4px;}
+@media(max-width:600px){
+.hd h1{font-size:18px;}
+.hd p{font-size:10px;}
+.nav a{padding:5px 10px;font-size:11px;}
+.rth{font-size:15px;padding:12px 14px;}
+.cth{font-size:13px;padding:8px 14px;}
+.hn-text{font-size:13px;}
+.hn-en{font-size:9px;}
+}
 </style>
 </head>
 <body>
+<div class="hd"><h1>🌏 高端酒店促销手册</h1><p>Luxury Hotel Promotions · Asia · Europe</p></div>
+<div class="sb"><input id="s" placeholder="搜索酒店名称..."></div>
+<div class="nav">
+<a onclick="sR('中国')">🇨🇳 中国</a>
+<a onclick="sR('泰国')">🇹🇭 泰国</a>
+<a onclick="sR('日本')">🇯🇵 日本</a>
+<a onclick="sR('新加坡')">🇸🇬 新加坡</a>
+<a onclick="sR('越南')">🇻🇳 越南</a>
+<a onclick="sR('巴厘岛')">🇮🇩 巴厘岛</a>
+<a onclick="sR('悉尼')">🇦🇺 悉尼</a>
+<a onclick="sR('巴黎')">🇫🇷 巴黎</a>
+<a onclick="sR('马德里')">🇪🇸 马德里</a>
+</div>
+<div id="list" class="pd"></div>
+<div class="sm" id="empty">没有找到匹配的酒店 🙁</div>
+<div class="ct"><span>💬 需要酒店预订？</span><a href="https://work.weixin.qq.com/" target="_blank">立即咨询</a></div>
+<a href="#" class="bt" id="backtotop" onclick="document.body.scrollTop=0;document.documentElement.scrollTop=0;return false;">↑</a>
+<script>
+var h = [{"n": "上海中心J酒店", "en": "J Hotel Shanghai Tower", "city": "上海", "region": "中国", "p": ["限量升级，升一级（确认后享） | 2026.12.31截止，法定节假日不可用", "住三付二 | 2026.12.31截止，法定节假日不可用及每周四不可用", "第二晚半价 | 2026.12.31截止"], "save": "住3付2", "tag": "云端之巅", "logo": ""}, {"n": "上海璞丽酒店", "en": "The Puli Hotel", "city": "上海", "region": "中国", "p": ["住三付二 | 2026.12.31截止", "连住优惠 | 2026.12.31截止"], "save": "住3付2", "tag": "品质之选", "logo": ""}, {"n": "上海居舍酒店", "en": "The Shanghai EDITION", "city": "上海", "region": "中国", "p": ["住三付二 | 2026.12.31截止", "8折起 | 2026.12.31截止", "保证升级（确认后享） | 2026.12.31截止"], "save": "住3付2", "tag": "设计先锋", "logo": ""}, {"n": "上海外滩苏宁宝丽嘉", "en": "Bellagio Shanghai", "city": "上海", "region": "中国", "p": ["住三付二 | 2026.12.31截止，法定节假日不可用", "8折优惠 | 2026.12.31截止"], "save": "住3付2", "tag": "品质之选", "logo": ""}, {"n": "上海建业里嘉佩乐酒店", "en": "Capella Shanghai", "city": "上海", "region": "中国", "p": ["单晚折扣 | 2026.12.31截止", "8折优惠 | 2026.12.31截止", "连住优惠 | 2026.12.31截止"], "save": "单晚折扣", "tag": "新贵奢华", "logo": ""}, {"n": "上海和平饭店", "en": "Fairmont Peace Hotel", "city": "上海", "region": "中国", "p": ["第二晚半价（订后价） | 2026.6.30截止（4.4-4.5,5.1-5.4,6.19-6.20）不可用"], "save": "第2晚半价", "tag": "百年传奇", "logo": ""}, {"n": "上海阿纳迪酒店", "en": "The Anandi Hotel", "city": "上海", "region": "中国", "p": ["住三付二 | 2026.12.31截止"], "save": "住3付2", "tag": "品质之选", "logo": ""}, {"n": "北京璞瑄酒店", "en": "The PuXuan Hotel", "city": "北京", "region": "中国", "p": ["住三付二 | 截止2026.4.30"], "save": "住3付2", "tag": "品质之选", "logo": ""}, {"n": "海南土福湾嘉佩乐度假酒店", "en": "Capella Tufu Bay", "city": "海南", "region": "中国", "p": ["住三付二 | 2026.3.22-2026.6.30（4.3-4.6,4.30-5.1,6.18-6.21不可用）", "住四付三 | 2026.3.22-2026.6.30（4.1-4.5,4.9-4.10,4.25,4.30-5.5,6.18-6.21不可用）", "保证升级（确认后享） | 2026.3.22-2026.6.30（4.1-4.5,4.9-4.10,4.25,4.30-5.5）"], "save": "住3付2", "tag": "新贵奢华", "logo": ""}, {"n": "杭州中心四季酒店", "en": "Four Seasons Hangzhou", "city": "杭州", "region": "中国", "p": ["住三付二 | 截止2026.9.30"], "save": "住3付2", "tag": "经典之选", "logo": ""}, {"n": "杭州西子湖四季酒店", "en": "Four Seasons Hangzhou at West Lake", "city": "杭州", "region": "中国", "p": ["8折优惠（订立享） | 截止2026.12.31"], "save": "8折", "tag": "经典之选", "logo": ""}, {"n": "成都居舍酒店", "en": "The Temple House", "city": "成都", "region": "中国", "p": ["住三付二 | 截止2026.12.31"], "save": "住3付2", "tag": "设计先锋", "logo": ""}, {"n": "厦门七尚酒店", "en": "Lohkah Hotel", "city": "厦门", "region": "中国", "p": ["住三付二 | 截止2026.6.30"], "save": "住3付2", "tag": "品质之选", "logo": ""}, {"n": "香港尼依格罗美利酒店", "en": "Niccolo Hotel", "city": "香港", "region": "中国", "p": ["连升两级（确认后享） | 截止2026.12.31", "住三付二+保证升级 | 截止2026.12.31", "住四付三+保证升级 | 截止2026.12.31"], "save": "住3付2", "tag": "品质之选", "logo": ""}, {"n": "香港居舍", "en": "The Murray", "city": "香港", "region": "中国", "p": ["8折优惠 | 截止2026.12.31", "住三付二 | 截止2026.12.20", "住二付一 | 截止2026.12.31"], "save": "8折", "tag": "设计先锋", "logo": ""}, {"n": "香港丽思卡尔顿", "en": "The Ritz-Carlton Hong Kong", "city": "香港", "region": "中国", "p": ["住三付二（订后改） | 截止2026.9.30（5.1-5.3不可用）"], "save": "住3付2", "tag": "地标奢华", "logo": ""}, {"n": "香港瑰丽酒店", "en": "Rosewood Hong Kong", "city": "香港", "region": "中国", "p": ["住三付二 | 截止2026.12.31"], "save": "住3付2", "tag": "设计美学", "logo": ""}, {"n": "曼谷嘉佩乐酒店", "en": "Capella Bangkok", "city": "曼谷", "region": "泰国", "p": ["住三付二 | 截止2026.12.20", "保证升级（确认后享） | 截止2026.6.30", "八二折优惠 | 截止2026.12.31", "七五折优惠+消费额度 | 截止2026.12.31"], "save": "住3付2", "tag": "新贵奢华", "logo": ""}, {"n": "普吉岛瑰丽酒店", "en": "Rosewood Phuket", "city": "普吉", "region": "泰国", "p": ["住二付三 | 截止2026.6.30"], "save": "", "tag": "设计美学", "logo": ""}, {"n": "苏梅岛康莱德酒店", "en": "Conrad Koh Samui", "city": "苏梅", "region": "泰国", "p": ["住三付二 | 截止2026.12.30"], "save": "住3付2", "tag": "商务优选", "logo": ""}, {"n": "曼谷丽思卡尔顿", "en": "The Ritz-Carlton Bangkok", "city": "曼谷", "region": "泰国", "p": ["住三付二 | 截止2026.7.31", "住三付二 | 截止2026.7.31（4.13-4.15不可用）"], "save": "住3付2", "tag": "地标奢华", "logo": ""}, {"n": "曼谷文华东方酒店", "en": "Mandarin Oriental Bangkok", "city": "曼谷", "region": "泰国", "p": ["住三付二 | 即日起至2026-10-31"], "save": "住3付2", "tag": "百年经典", "logo": ""}, {"n": "曼谷湄南河四季酒店", "en": "Four Seasons Bangkok", "city": "曼谷", "region": "泰国", "p": ["住三付二 | 即日起至2026-9-30"], "save": "住3付2", "tag": "经典之选", "logo": ""}, {"n": "曼谷瑰丽酒店", "en": "Rosewood Bangkok", "city": "曼谷", "region": "泰国", "p": ["住三付二 | 即日起至2026-9-14"], "save": "住3付2", "tag": "设计美学", "logo": ""}, {"n": "曼谷新通凯宾斯基酒店", "en": "Kempinski Hotel Siam", "city": "曼谷", "region": "泰国", "p": ["住三付二 | 即日起至2026-7-31"], "save": "住3付2", "tag": "欧式经典", "logo": ""}, {"n": "曼谷暹罗凯宾斯基酒店", "en": "Siam Kempinski Hotel", "city": "曼谷", "region": "泰国", "p": ["住三付二 | 即日起至2026-12-31"], "save": "住3付2", "tag": "欧式经典", "logo": ""}, {"n": "曼谷半岛酒店", "en": "The Peninsula Bangkok", "city": "曼谷", "region": "泰国", "p": ["住三付二 | 即日起至2026-11-30"], "save": "住3付2", "tag": "经典地标", "logo": ""}, {"n": "苏梅岛悦榕庄", "en": "Banyan Tree Samui", "city": "苏梅", "region": "泰国", "p": ["住四付三 | 即日起至2026-7-31"], "save": "住4付3", "tag": "度假圣地", "logo": ""}, {"n": "普吉岛特里萨拉度假酒店", "en": "Trisara Phuket", "city": "普吉", "region": "泰国", "p": ["住三付二 | 即日起至2026-6-30"], "save": "住3付2", "tag": "品质之选", "logo": ""}, {"n": "东京皇宫酒店", "en": "Palace Hotel Tokyo", "city": "东京", "region": "日本", "p": ["住三付二 | 截止2026.9.30"], "save": "住3付2", "tag": "品质之选", "logo": ""}, {"n": "京都嘉佩乐酒店", "en": "Capella Kyoto", "city": "京都", "region": "日本", "p": ["住四付三 | 2026.4.13-2026.12.31"], "save": "住4付3", "tag": "新贵奢华", "logo": ""}, {"n": "东京康莱德", "en": "Conrad Tokyo", "city": "东京", "region": "日本", "p": ["住三付二"], "save": "住3付2", "tag": "商务优选", "logo": ""}, {"n": "京都六宅LXR酒店及度假村", "en": "", "city": "京都", "region": "日本", "p": ["住三付二 | 截止2026.12.31"], "save": "住3付2", "tag": "品质之选", "logo": ""}, {"n": "东京香格里拉大酒店", "en": "Shangri-La Tokyo", "city": "东京", "region": "日本", "p": ["住三付二 | 截止2027.2.28"], "save": "住3付2", "tag": "亚洲风情", "logo": ""}, {"n": "东京半岛酒店", "en": "The Peninsula Tokyo", "city": "东京", "region": "日本", "p": ["住四付三 | 截止2026.12.19"], "save": "住4付3", "tag": "经典地标", "logo": ""}, {"n": "京都丽思卡尔顿酒店", "en": "The Ritz-Carlton Kyoto", "city": "京都", "region": "日本", "p": ["住三付二（订后改） | 截止2026.12.18", "住四付三（订后改） | 截止2026.12.18"], "save": "住3付2", "tag": "地标奢华", "logo": ""}, {"n": "阿巴迪亚雷图尔塔勒多敏酒店", "en": "", "city": "未知", "region": "其他", "p": ["住四付三 | 截止2026.12.9"], "save": "住4付3", "tag": "品质之选", "logo": ""}, {"n": "安纳塔拉别墅帕迪耶纳宫", "en": "", "city": "未知", "region": "其他", "p": ["住四付三 | 截止2026.12.31"], "save": "住4付3", "tag": "品质之选", "logo": ""}, {"n": "马德里四季酒店", "en": "Four Seasons Madrid", "city": "马德里", "region": "马德里", "p": ["住四付三 | 截止2026.12.31", "住四付三 | 即日起至2026-9-30"], "save": "住4付3", "tag": "经典之选", "logo": ""}, {"n": "巴塞罗那玛杰斯蒂克水疗酒店", "en": "", "city": "未知", "region": "其他", "p": ["住四付三 | 截止2026.12.31"], "save": "住4付3", "tag": "品质之选", "logo": ""}, {"n": "伊比沙湾诺布酒店", "en": "", "city": "未知", "region": "其他", "p": ["住四付三 | 2026.4.16-2026.10.25"], "save": "住4付3", "tag": "品质之选", "logo": ""}, {"n": "新加坡雅辰酒店", "en": "Artyzen Singapore", "city": "新加坡", "region": "新加坡", "p": ["住三付二 | 截止2026.12.31"], "save": "住3付2", "tag": "品质之选", "logo": ""}, {"n": "新加坡嘉佩乐酒店", "en": "Capella Singapore", "city": "新加坡", "region": "新加坡", "p": ["住三付二 | 截止2026.12.18", "送接送（确认后享） | 截止2026.6.30", "85折优惠 | 截止2026.12.31"], "save": "住3付2", "tag": "新贵奢华", "logo": ""}, {"n": "新加坡费尔蒙酒店", "en": "Fairmont Singapore", "city": "新加坡", "region": "新加坡", "p": ["住三付二 | 截止2026.12.31", "住四付三 | 截止2026.12.31"], "save": "住3付2", "tag": "历史优雅", "logo": ""}, {"n": "新加坡文华东方酒店", "en": "Mandarin Oriental Singapore", "city": "新加坡", "region": "新加坡", "p": ["住四付三 | 截止2026.12.31"], "save": "住4付3", "tag": "百年经典", "logo": ""}, {"n": "新加坡莱佛士酒店", "en": "Raffles Singapore", "city": "新加坡", "region": "新加坡", "p": ["住三付二 | 截止2026.12.20", "住四付三 | 截止2026.12.31"], "save": "住3付2", "tag": "传奇酒店", "logo": ""}, {"n": "新加坡圣淘沙莱佛士酒店", "en": "Raffles Sentosa", "city": "新加坡", "region": "新加坡", "p": ["住三付二 | 即日起至2026-11-30"], "save": "住3付2", "tag": "传奇酒店", "logo": ""}, {"n": "新加坡香格里拉大酒店", "en": "Shangri-La Singapore", "city": "新加坡", "region": "新加坡", "p": ["住三付二 | 即日起至2026-9-30"], "save": "住3付2", "tag": "亚洲风情", "logo": ""}, {"n": "新加坡富丽敦酒店", "en": "The Fullerton Hotel", "city": "新加坡", "region": "新加坡", "p": ["住三付二 | 即日起至2026-9-19"], "save": "住3付2", "tag": "品质之选", "logo": ""}, {"n": "新加坡浪淘沙嘉佩乐酒店", "en": "Capella Sentosa", "city": "新加坡", "region": "新加坡", "p": ["住三付二 | 即日起至2026-7-31"], "save": "住3付2", "tag": "新贵奢华", "logo": ""}, {"n": "新加坡富丽敦海湾酒店", "en": "The Fullerton Bay Hotel", "city": "新加坡", "region": "新加坡", "p": ["住三付二 | 即日起至2026-7-31"], "save": "住3付2", "tag": "品质之选", "logo": ""}, {"n": "新加坡首都凯宾斯基酒店", "en": "Kempinski Capitol Singapore", "city": "新加坡", "region": "新加坡", "p": ["住三付二 | 即日起至2026-7-31"], "save": "住3付2", "tag": "欧式经典", "logo": ""}, {"n": "河内嘉佩乐酒店", "en": "Capella Hanoi", "city": "河内", "region": "越南", "p": ["住三付二 | 截止2026.9.30"], "save": "住3付2", "tag": "新贵奢华", "logo": ""}, {"n": "富国岛丽晶酒店", "en": "Regent Phu Quoc", "city": "富国岛", "region": "越南", "p": ["住三付二 | 即日起至2026-7-31"], "save": "住3付2", "tag": "品质之选", "logo": ""}, {"n": "巴厘岛莱佛士酒店", "en": "Raffles Bali", "city": "巴厘岛", "region": "巴厘岛", "p": ["住三付二 | 即日起至2026-12-30"], "save": "住3付2", "tag": "传奇酒店", "logo": ""}, {"n": "卓美亚巴厘酒店", "en": "Jumeirah Bali", "city": "未知", "region": "其他", "p": ["住三付二 | 即日起至2026-12-30"], "save": "住3付2", "tag": "品质之选", "logo": ""}, {"n": "巴厘岛布罕悦榕逸境度假村", "en": "Banyan Tree Escape", "city": "巴厘岛", "region": "巴厘岛", "p": ["住四付三 | 即日起至2026-9-30"], "save": "住4付3", "tag": "品质之选", "logo": ""}, {"n": "巴厘岛乌布山妍四季酒店", "en": "Four Seasons Ubud", "city": "巴厘岛", "region": "巴厘岛", "p": ["住四付三 | 即日起至2026-8-31"], "save": "住4付3", "tag": "经典之选", "logo": ""}, {"n": "巴厘岛乌布嘉佩乐酒店", "en": "Capella Ubud", "city": "巴厘岛", "region": "巴厘岛", "p": ["住三付二 | 即日起至2026-7-31"], "save": "住3付2", "tag": "新贵奢华", "logo": ""}, {"n": "曼达帕丽思卡尔顿隐世酒店", "en": "Mandapa Ritz-Carlton Reserve", "city": "未知", "region": "其他", "p": ["住三付二-确认后享 | 即日起至2026-10-31"], "save": "住3付2", "tag": "地标奢华", "logo": ""}, {"n": "安纳塔拉巴厘岛乌布度假村", "en": "Anantara Ubud", "city": "巴厘岛", "region": "巴厘岛", "p": ["住四付三 | 即日起至2026-12-30"], "save": "住4付3", "tag": "品质之选", "logo": ""}, {"n": "土豆头套房和一室公寓", "en": "Potato Head Suites", "city": "未知", "region": "其他", "p": ["住四付三 | 即日起至2026-9-30"], "save": "住4付3", "tag": "品质之选", "logo": ""}, {"n": "悉尼四季酒店", "en": "Four Seasons Sydney", "city": "悉尼", "region": "悉尼", "p": ["住四付三 | 即日起至2026-6-30"], "save": "住4付3", "tag": "经典之选", "logo": ""}, {"n": "悉尼嘉佩乐酒店", "en": "Capella Sydney", "city": "悉尼", "region": "悉尼", "p": ["连住三晚七五折 | 即日起至2026-7-31"], "save": "75折", "tag": "新贵奢华", "logo": ""}, {"n": "悉尼达令港索菲特酒店", "en": "Sofitel Darling Harbour", "city": "悉尼", "region": "悉尼", "p": ["住三付二 | 即日起至2026-7-31"], "save": "住3付2", "tag": "法式浪漫", "logo": ""}, {"n": "悉尼洲际酒店", "en": "InterContinental Sydney", "city": "悉尼", "region": "悉尼", "p": ["住四付三 | 即日起至2026-7-31"], "save": "住4付3", "tag": "品质之选", "logo": ""}, {"n": "悉尼双湾洲际酒店", "en": "InterContinental Double Bay", "city": "悉尼", "region": "悉尼", "p": ["住三付二 | 即日起至2026-6-30"], "save": "住3付2", "tag": "品质之选", "logo": ""}, {"n": "巴黎半岛酒店", "en": "The Peninsula Paris", "city": "巴黎", "region": "巴黎", "p": ["住四付三 | 即日起至2026-10-30"], "save": "住4付3", "tag": "经典地标", "logo": ""}, {"n": "巴黎香格里拉酒店", "en": "Shangri-La Paris", "city": "巴黎", "region": "巴黎", "p": ["住四付三 | 即日起至2026-12-30"], "save": "住4付3", "tag": "亚洲风情", "logo": ""}, {"n": "乔治五世巴黎四季酒店", "en": "Four Seasons George V", "city": "巴黎", "region": "巴黎", "p": ["85折优惠 | 即日起至2026-7-31"], "save": "85折", "tag": "经典之选", "logo": ""}, {"n": "巴黎瑰丽酒店", "en": "Hôtel de Crillon", "city": "巴黎", "region": "巴黎", "p": ["住四付三 | 即日起至2026-6-30"], "save": "住4付3", "tag": "设计美学", "logo": ""}, {"n": "SO/巴黎酒店", "en": "SO\\/ Paris", "city": "巴黎", "region": "巴黎", "p": ["住三付二 | 即日起至2026-7-31"], "save": "住3付2", "tag": "品质之选", "logo": ""}, {"n": "巴黎卢泰西亚文华东方酒店", "en": "Lutetia", "city": "巴黎", "region": "巴黎", "p": ["住四付三 | 即日起至2026-8-31"], "save": "住4付3", "tag": "百年经典", "logo": ""}, {"n": "索菲特巴黎法布格酒店", "en": "Sofitel Le Faubourg", "city": "巴黎", "region": "巴黎", "p": ["住四付三 | 即日起至2026-12-30"], "save": "住4付3", "tag": "法式浪漫", "logo": ""}, {"n": "巴黎勒布里斯托酒店", "en": "Le Bristol Paris", "city": "巴黎", "region": "巴黎", "p": ["住四付三 | 即日起至2026-7-31"], "save": "住4付3", "tag": "品质之选", "logo": ""}, {"n": "马德里丽思文华东方酒店", "en": "Mandarin Oriental Ritz", "city": "马德里", "region": "马德里", "p": ["住四付三 | 即日起至2026-11-30"], "save": "住4付3", "tag": "百年经典", "logo": ""}, {"n": "瑰丽麦格纳别墅酒店", "en": "Rosewood Villa Magna", "city": "未知", "region": "其他", "p": ["住四付三 | 即日起至2026-10-20"], "save": "住4付3", "tag": "设计美学", "logo": ""}, {"n": "马德里洲际酒店", "en": "InterContinental Madrid", "city": "马德里", "region": "马德里", "p": ["住三付二 | 即日起至2026-5-31"], "save": "住3付2", "tag": "品质之选", "logo": ""}];
 
-<!-- ===== HOME PAGE ===== -->
-<div id="home-page">
+function groupByCity(li) {
+  var g = {};
+  for(var i=0;i<li.length;i++) {
+    var ct = li[i].city;
+    if(!g[ct]) g[ct] = [];
+    g[ct].push(li[i]);
+  }
+  return g;
+}
 
-<div class="header">
-  <h1>🇹🇭 泰国顶奢酒店</h1>
-  <div class="sub">Luxury Hotels of Thailand</div>
-  <div class="badge">🔥 全部六折优惠</div>
-</div>
+function groupByRegion(li) {
+  var g = {};
+  for(var i=0;i<li.length;i++) {
+    var r = li[i].region;
+    if(!g[r]) g[r] = [];
+    g[r].push(li[i]);
+  }
+  return g;
+}
 
-<div class="container">
+var regionOrder = ["中国","泰国","日本","新加坡","越南","巴厘岛","悉尼","巴黎","马德里"];
 
-<div class="section">
-<div class="section-title">📍 普吉岛</div>
+function render(list) {
+  var app = document.getElementById("list");
+  var html = "";
+  if(list === h || list.length === h.length) {
+    var hot = ["曼谷嘉佩乐酒店","新加坡嘉佩乐酒店","巴厘岛乌布山姣四季酒店"];
+    var hh = [];
+    for(var i=0;i<hot.length;i++) {
+      for(var j=0;j<h.length;j++) { if(h[j].n === hot[i]) { hh.push(h[j]); break; } }
+    }
+    if(hh.length > 0) {
+      html += '<div class="hotb"><div class="hott">🔥 热门推荐</div><div class="hotg">';
+      for(var i=0;i<hh.length;i++) {
+        html += '<div class="hti" onclick="goHotel(this)" data-name="' + hh[i].n + '">' + hh[i].n + '</div>';
+      }
+      html += '</div></div>';
+    }
+  }
 
-<a class="hotel-link" href="#amanpuri">
-  <div class="name">安缦璞瑞</div>
-  <div class="name-en">Amanpuri</div>
-  <div class="tags"><span class="tag">避世禅意</span><span class="tag">安缦朝圣</span><span class="tag">私人海滩</span></div>
-  <div class="price">💰 8,000-15,000 泰铢/晚</div>
-</a>
+  var grouped = groupByRegion(list);
+  for(var ri=0;ri<regionOrder.length;ri++) {
+    var region = regionOrder[ri];
+    if(!grouped[region]) continue;
+    html += '<div class="rg" id="rg_' + region + '">';
+    html += '<div class="rth" onclick="tR(this)">' + region + ' <span class="ar">▼</span></div>';
+    html += '<div class="rb">';
+    var byCity = groupByCity(grouped[region]);
+    var cNames = Object.keys(byCity).sort();
+    for(var ci=0;ci<cNames.length;ci++) {
+      var ct = cNames[ci];
+      html += '<div class="cth" onclick="tC(this)">' + ct + ' <span>' + byCity[ct].length + ' ▼</span></div>';
+      html += '<div class="cb">';
+      for(var hi=0;hi<byCity[ct].length;hi++) {
+        var x = byCity[ct][hi];
+        html += '<div class="hc"><div class="ht" onclick="tog(this)">';
+        html += '<div class="hn">';
+        // logo removed for consistency
+        html += '<span><span class="hn-text">' + x.n + '</span>';
+        if(x.en) html += '<span class="hn-en">' + x.en + '</span>';
+        html += '</span></div><span class="ht-icon">+</span></div>';
+        html += '<div class="hb"><span class="tg">' + x.tag + '</span>';
+        if(x.save) html += '<div class="sv">' + x.save + '</div>';
+        html += '<a class="mp" href="https://www.google.com/maps/search/' + encodeURIComponent(x.n + " " + x.city) + '" target="_blank">📍 在地图上查看</a>';
+        html += '<div class="pc">促销政策 (' + x.p.length + '项)</div>';
+        if(x.p.length === 0) {
+          html += '<div style="color:#ddd;font-size:11px;">暂无促销信息</div>';
+        } else {
+          for(var pi=0;pi<x.p.length;pi++) {
+            var ps = x.p[pi].split(" | ");
+            html += '<div class="pr">' + ps[0] + (ps[1] ? '<em>' + ps[1] + '</em>' : '') + '</div>';
+          }
+        }
+        html += '</div></div>';
+      }
+      html += '</div>';
+    }
+    html += '</div></div>';
+  }
 
-<a class="hotel-link" href="#rosewood">
-  <div class="name">普吉瑰丽</div>
-  <div class="name-en">Rosewood Phuket</div>
-  <div class="tags"><span class="tag">现代奢华</span><span class="tag">设计师酒店</span><span class="tag">翡翠湾</span></div>
-  <div class="price">💰 6,000-12,000 泰铢/晚</div>
-</a>
+  app.innerHTML = html;
+  document.getElementById("empty").style.display = list.length === 0 ? "block" : "none";
+}
 
-<a class="hotel-link" href="#banyan">
-  <div class="name">普吉悦榕庄</div>
-  <div class="name-en">Banyan Tree Phuket</div>
-  <div class="tags"><span class="tag">东南亚度假</span><span class="tag">私密别墅</span><span class="tag">性价比</span></div>
-  <div class="price">💰 4,000-8,000 泰铢/晚</div>
-</a>
-</div>
+function tR(el) {
+  var arrow = el.querySelector(".ar");
+  var body = el.nextElementSibling;
+  if(body) body.classList.toggle("on");
+  if(arrow) arrow.classList.toggle("on");
+}
 
-<div class="section">
-<div class="section-title">📍 苏梅岛</div>
+function tC(el) {
+  var body = el.nextElementSibling;
+  if(body) body.classList.toggle("on");
+}
 
-<a class="hotel-link" href="#sixsenses">
-  <div class="name">苏梅岛六善</div>
-  <div class="name-en">Six Senses Samui</div>
-  <div class="tags"><span class="tag">原木自然</span><span class="tag">避世养生</span><span class="tag">悬崖海景</span></div>
-  <div class="price">💰 5,000-10,000 泰铢/晚</div>
-</a>
+function tog(el) {
+  var b = el.nextElementSibling;
+  if(b && b.classList) b.classList.toggle("on");
+}
 
-<a class="hotel-link" href="#wsamui">
-  <div class="name">苏梅岛W酒店</div>
-  <div class="name-en">W Koh Samui</div>
-  <div class="tags"><span class="tag">潮流时尚</span><span class="tag">派对氛围</span><span class="tag">年轻人</span></div>
-  <div class="price">💰 4,500-9,000 泰铢/晚</div>
-</a>
-</div>
+function sR(region) {
+  var el = document.getElementById("rg_" + region);
+  if(el) {
+    el.scrollIntoView({behavior:"smooth"});
+    var body = el.querySelector(".rb");
+    if(body) body.classList.add("on");
+    var arrow = el.querySelector(".ar");
+    if(arrow) arrow.classList.add("on");
+  }
+}
 
-<div class="section">
-<div class="section-title">📍 曼谷</div>
+function goHotel(el) {
+  var name = el.getAttribute("data-name");
+  var hNames = document.querySelectorAll(".hn-text");
+  for(var i=0;i<hNames.length;i++) {
+    if(hNames[i].textContent === name) {
+      var hotelHeader = hNames[i].closest(".ht");
+      if(!hotelHeader) continue;
+      var hotelCard = hotelHeader.closest(".hc");
+      if(!hotelCard) continue;
+      var cityBody = hotelCard.closest(".cb");
+      var regionBody = hotelCard.closest(".rb");
+      var hotelBody = hotelCard.querySelector(".hb");
+      var cityHeader = cityBody ? cityBody.previousElementSibling : null;
+      if(regionBody) regionBody.classList.add("on");
+      if(cityBody) cityBody.classList.add("on");
+      if(hotelBody) hotelBody.classList.add("on");
+      hotelCard.scrollIntoView({behavior:"smooth",block:"center"});
+      break;
+    }
+  }
+}
 
-<a class="hotel-link" href="#mandarin">
-  <div class="name">曼谷文华东方</div>
-  <div class="name-en">Mandarin Oriental Bangkok</div>
-  <div class="tags"><span class="tag">百年经典</span><span class="tag">殖民风情</span><span class="tag">湄南河</span></div>
-  <div class="price">💰 6,000-15,000 泰铢/晚</div>
-</a>
+document.getElementById("s").addEventListener("input", function() {
+  var val = this.value;
+  if(!val.trim()) { window.onscroll = function() {
+  var bt = document.getElementById("backtotop");
+  if(bt) {
+    if(document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+      bt.style.display = "flex";
+    } else {
+      bt.style.display = "none";
+    }
+  }
+};
+render(h); return; }
+  var kw = val.toLowerCase();
+  var r = [];
+  for(var i=0;i<h.length;i++) {
+    if(h[i].n.toLowerCase().indexOf(kw) !== -1 || h[i].city.toLowerCase().indexOf(kw) !== -1 || h[i].region.toLowerCase().indexOf(kw) !== -1 || (h[i].en && h[i].en.toLowerCase().indexOf(kw) !== -1)) {
+      r.push(h[i]);
+    }
+  }
+  render(r);
+});
 
-<a class="hotel-link" href="#capella">
-  <div class="name">曼谷嘉佩乐</div>
-  <div class="name-en">Capella Bangkok</div>
-  <div class="tags"><span class="tag">现代极简</span><span class="tag">顶级新贵</span><span class="tag">湄南河</span></div>
-  <div class="price">💰 7,000-14,000 泰铢/晚</div>
-</a>
-
-<a class="hotel-link" href="#fsbangkok">
-  <div class="name">曼谷四季</div>
-  <div class="name-en">Four Seasons Bangkok</div>
-  <div class="tags"><span class="tag">现代奢华</span><span class="tag">大气稳重</span><span class="tag">河畔</span></div>
-  <div class="price">💰 5,000-10,000 泰铢/晚</div>
-</a>
-
-<a class="hotel-link" href="#peninsula">
-  <div class="name">曼谷半岛</div>
-  <div class="name-en">The Peninsula Bangkok</div>
-  <div class="tags"><span class="tag">东方优雅</span><span class="tag">经典奢华</span><span class="tag">河景</span></div>
-  <div class="price">💰 5,000-12,000 泰铢/晚</div>
-</a>
-
-<a class="hotel-link" href="#waldorf">
-  <div class="name">曼谷华尔道夫</div>
-  <div class="name-en">Waldorf Astoria Bangkok</div>
-  <div class="tags"><span class="tag">美式奢华</span><span class="tag">高空城景</span><span class="tag">市中心</span></div>
-  <div class="price">💰 4,000-8,000 泰铢/晚</div>
-</a>
-</div>
-
-<div class="section">
-<div class="section-title">📍 清迈</div>
-
-<a class="hotel-link" href="#fschiangmai">
-  <div class="name">清迈四季</div>
-  <div class="name-en">Four Seasons Chiang Mai</div>
-  <div class="tags"><span class="tag">田园泰式</span><span class="tag">稻田泳池</span><span class="tag">清幽避世</span></div>
-  <div class="price">💰 3,500-7,000 泰铢/晚</div>
-</a>
-</div>
-
-</div>
-
-<div class="footer">
-  <div class="logo">云端之旅</div>
-  <p>带您住遍全世界最好的酒店</p>
-</div>
-
-</div>
-
-<!-- ===== DETAIL PAGES ===== -->
-
-<!-- 安缦璞瑞 -->
-<div id="amanpuri" class="detail-page">
-<div class="detail-header" style="background:linear-gradient(135deg,#2c1810,#5c3a28,#8b6b4a,#3d2b1f);">
-<a class="detail-back" href="#home-page">← 返回列表</a>
-<div class="name">安缦璞瑞</div>
-<div class="name-en">Amanpuri · 普吉岛 Phuket</div>
-<div class="detail-badge" style="background:#d4af37;color:#2c1810;">🔥 3天2晚 · 6折优惠</div>
-</div>
-<div class="container detail-body">
-
-<div class="info-card">
-<input type="checkbox" id="a1" class="info-expand" checked>
-<label class="info-header" for="a1">
-<span class="icon">📍</span><span class="title">位置与交通</span><span class="arrow">▼</span>
-</label>
-<div class="info-content">
-<p>位于普吉岛西海岸潘西海滩（Pansea Beach），私密海湾独享整片沙滩。从普吉机场乘车约40分钟，酒店提供免费机场接送服务。周边10分钟车程可达芭东夜市和普吉镇。</p>
-<div class="sub-section">
-<input type="checkbox" id="a1a" class="sub-toggle">
-<label class="sub-label" for="a1a">🏖️ 潘西海滩详细介绍</label>
-<div class="sub-content">潘西海滩是普吉岛最私密的海滩之一，仅对安缦住客开放。沙滩细白柔软，全长约300米，被热带绿植环绕。日落时分景色绝美，酒店提供沙滩晚餐服务。</div>
-</div>
-<div class="sub-section">
-<input type="checkbox" id="a1b" class="sub-toggle">
-<label class="sub-label" for="a1b">🗺️ 周边景点推荐</label>
-<div class="sub-content">芭东夜市（车程10分钟）- 感受泰国夜市文化<br>普吉大佛（车程20分钟）- 山顶俯瞰全岛<br>查龙寺（车程25分钟）- 普吉最大佛教寺庙<br>幻多奇乐园（车程15分钟）- 适合家庭游客</div>
-</div>
-</div>
-</div>
-
-<div class="info-card">
-<input type="checkbox" id="a2" class="info-expand">
-<label class="info-header" for="a2">
-<span class="icon">🏠</span><span class="title">环境与设施</span><span class="arrow">▼</span>
-</label>
-<div class="info-content">
-<p>安缦璞瑞坐落于普吉岛西海岸的潘西海滩，全世界第一家安缦酒店，自1988年开业至今仍保持顶级水准。共40栋泰式凉亭别墅，被热带花园环绕，每栋都有独立庭院。员工与客人比例高达5:1。</p>
-<div class="sub-section">
-<input type="checkbox" id="a2a" class="sub-toggle">
-<label class="sub-label" for="a2a">🏊 泳池&SPA</label>
-<div class="sub-content">40米无边泳池俯瞰安达曼海，水疗中心占地1000㎡，提供传统泰式按摩、阿育吠陀疗程和私人瑜伽课程。</div>
-</div>
-<div class="sub-section">
-<input type="checkbox" id="a2b" class="sub-toggle">
-<label class="sub-label" for="a2b">🍽️ 餐饮体验</label>
-<div class="sub-content">主餐厅The Terrace提供正宗泰式和意式料理，Nama日式餐厅由东京大厨主理，海滩烧烤在月光下享用。</div>
-</div>
-</div>
-</div>
-
-<div class="info-card">
-<input type="checkbox" id="a3" class="info-expand">
-<label class="info-header" for="a3">
-<span class="icon">🎨</span><span class="title">风格与设计</span><span class="arrow">▼</span>
-</label>
-<div class="info-content">
-<p>泰式凉亭建筑风格，由建筑师Ed Tuttle操刀设计。深色木质结构配以泰丝软装，整体呈现低调奢华的禅意美学。每栋别墅都融合了传统泰式建筑元素与现代舒适设施。</p>
-</div>
-</div>
-
-<div class="info-card">
-<input type="checkbox" id="a4" class="info-expand">
-<label class="info-header" for="a4">
-<span class="icon">💰</span><span class="title">价格与优惠</span><span class="arrow">▼</span>
-</label>
-<div class="info-content">
-<p>原价 8,000-15,000 泰铢/晚<br>🔥 限时优惠：3天2晚 六折<br>🎁 额外赠送：每日双早 + 机场接送 + 100美元SPA代金券</p>
-<div class="sub-section">
-<input type="checkbox" id="a4a" class="sub-toggle">
-<label class="sub-label" for="a4a">📋 房型及对应价格</label>
-<div class="sub-content">庭园套房 — 8,000泰铢/晚<br>海景套房 — 11,000泰铢/晚<br>海景泳池别墅 — 15,000泰铢/晚<br>安缦别墅 — 35,000泰铢/晚<br>（以上为原价，优惠价在此基础上6折）</div>
-</div>
-<div class="sub-section">
-<input type="checkbox" id="a4b" class="sub-toggle">
-<label class="sub-label" for="a4b">📞 立即咨询预订</label>
-<div class="sub-content">请联系我们获取最新优惠和空房情况。支持微信/支付宝支付，提供中文客服全程服务。</div>
-</div>
-</div>
-</div>
-
-<div class="info-card">
-<label class="info-header" style="cursor:default;">
-<span class="icon">📊</span><span class="title">同城对比</span>
-</label>
-<div class="compare-table">
-<div class="compare-row compare-hdr"><span class="c-hotel">酒店</span><span class="c-style">风格</span><span class="c-price">价格</span></div>
-<div class="compare-row active"><span class="c-hotel">✦ 安缦璞瑞</span><span class="c-style">避世禅意</span><span class="c-price">8,000-15,000</span></div>
-<a class="c-link" href="#rosewood"><span class="c-hotel">普吉瑰丽</span><span class="c-style">现代奢华</span><span class="c-price">6,000-12,000</span></a>
-<a class="c-link" href="#banyan"><span class="c-hotel">悦榕庄</span><span class="c-style">东南亚度假</span><span class="c-price">4,000-8,000</span></a>
-</div>
-</div>
-
-<a class="detail-back" href="#home-page" style="display:block;text-align:center;margin:20px auto 0;width:fit-content;color:#b8860b;border:1px solid #d4af37;background:none;">← 返回酒店列表</a>
-</div>
-</div>
-
-<!-- 普吉瑰丽 -->
-<div id="rosewood" class="detail-page">
-<div class="detail-header" style="background:linear-gradient(135deg,#0a1f2e,#1a4a5e,#2d7a8c,#0f2d3d);">
-<a class="detail-back" href="#home-page">← 返回列表</a>
-<div class="name">普吉瑰丽</div>
-<div class="name-en">Rosewood Phuket · 普吉岛 Phuket</div>
-<div class="detail-badge" style="background:#b8d4d8;color:#0a1f2e;">🔥 3天2晚 · 6折优惠</div>
-</div>
-<div class="container detail-body">
-
-<div class="info-card">
-<input type="checkbox" id="r1" class="info-expand" checked>
-<label class="info-header" for="r1"><span class="icon">📍</span><span class="title">位置与交通</span><span class="arrow">▼</span></label>
-<div class="info-content">
-<p>坐落于普吉岛翡翠湾（Emerald Bay），距普吉机场35分钟车程。远离喧嚣但又不失便利，10分钟可达卡伦观景台。</p>
-<div class="sub-section">
-<input type="checkbox" id="r1a" class="sub-toggle">
-<label class="sub-label" for="r1a">🌊 翡翠湾漫游指南</label>
-<div class="sub-content">翡翠湾得名于其碧绿清澈的海水，是普吉岛最优质的浮潜点之一。酒店有专属沙滩入口，提供浮潜装备免费借用。</div>
-</div>
-</div>
-</div>
-
-<div class="info-card">
-<input type="checkbox" id="r2" class="info-expand">
-<label class="info-header" for="r2"><span class="icon">🏠</span><span class="title">环境与设施</span><span class="arrow">▼</span></label>
-<div class="info-content">
-<p>71间客房及别墅，由知名设计事务所BAR Studio操刀。酒店拥有500㎡无边际泳池、ASAYA水疗中心和三个特色餐厅。</p>
-</div>
-</div>
-
-<div class="info-card">
-<input type="checkbox" id="r3" class="info-expand">
-<label class="info-header" for="r3"><span class="icon">🎨</span><span class="title">风格与设计</span><span class="arrow">▼</span></label>
-<div class="info-content">
-<p>现代奢华风格，融合普吉本土文化元素。室内设计大量运用木质、藤编和石材，营造「精致的在地感」。</p>
-</div>
-</div>
-
-<div class="info-card">
-<input type="checkbox" id="r4" class="info-expand">
-<label class="info-header" for="r4"><span class="icon">💰</span><span class="title">价格与优惠</span><span class="arrow">▼</span></label>
-<div class="info-content">
-<p>原价 6,000-12,000 泰铢/晚<br>🔥 限时优惠：3天2晚 六折<br>🎁 额外赠送：每日双早 + 迷你吧免费</p>
-</div>
-</div>
-
-<div class="info-card">
-<div class="compare-table">
-<div class="compare-row compare-hdr"><span class="c-hotel">酒店</span><span class="c-style">风格</span><span class="c-price">价格</span></div>
-<a class="c-link" href="#amanpuri"><span class="c-hotel">安缦璞瑞</span><span class="c-style">避世禅意</span><span class="c-price">8,000-15,000</span></a>
-<div class="compare-row active"><span class="c-hotel">✦ 普吉瑰丽</span><span class="c-style">现代奢华</span><span class="c-price">6,000-12,000</span></div>
-<a class="c-link" href="#banyan"><span class="c-hotel">悦榕庄</span><span class="c-style">东南亚度假</span><span class="c-price">4,000-8,000</span></a>
-</div>
-</div>
-
-<a class="detail-back" href="#home-page" style="display:block;text-align:center;margin:20px auto 0;width:fit-content;color:#b8860b;border:1px solid #d4af37;background:none;">← 返回酒店列表</a>
-</div>
-</div>
-
-<!-- 悦榕庄 -->
-<div id="banyan" class="detail-page">
-<div class="detail-header" style="background:linear-gradient(135deg,#1a2e1a,#2d5a2d,#4a8c4a,#1e3b1e);">
-<a class="detail-back" href="#home-page">← 返回列表</a>
-<div class="name">普吉悦榕庄</div>
-<div class="name-en">Banyan Tree Phuket · 普吉岛 Phuket</div>
-<div class="detail-badge" style="background:#90d890;color:#1a2e1a;">🔥 3天2晚 · 6折优惠</div>
-</div>
-<div class="container detail-body">
-<div class="info-card">
-<input type="checkbox" id="b1" class="info-expand" checked>
-<label class="info-header" for="b1"><span class="icon">📍</span><span class="title">位置与交通</span><span class="arrow">▼</span></label>
-<div class="info-content"><p>位于普吉岛邦涛海滩（Bang Tao Beach），距机场20分钟车程。普吉乐古浪度假村内，共享18洞高尔夫球场。</p></div>
-</div>
-<div class="info-card">
-<input type="checkbox" id="b2" class="info-expand">
-<label class="info-header" for="b2"><span class="icon">🏠</span><span class="title">环境与设施</span><span class="arrow">▼</span></label>
-<div class="info-content"><p>普吉第一家全泳池别墅度假村，342栋别墅均配私人泳池和花园。悦榕SPA享誉全球，拥有15间理疗室。</p></div>
-</div>
-<div class="info-card">
-<label class="info-header"><span class="icon">📊</span><span class="title">同城对比</span></label>
-<div class="compare-table">
-<div class="compare-row compare-hdr"><span class="c-hotel">酒店</span><span class="c-style">风格</span><span class="c-price">价格</span></div>
-<a class="c-link" href="#amanpuri"><span class="c-hotel">安缦璞瑞</span><span class="c-style">避世禅意</span><span class="c-price">8,000-15,000</span></a>
-<a class="c-link" href="#rosewood"><span class="c-hotel">普吉瑰丽</span><span class="c-style">现代奢华</span><span class="c-price">6,000-12,000</span></a>
-<div class="compare-row active"><span class="c-hotel">✦ 悦榕庄</span><span class="c-style">东南亚度假</span><span class="c-price">4,000-8,000</span></div>
-</div>
-</div>
-<a class="detail-back" href="#home-page" style="display:block;text-align:center;margin:20px auto 0;width:fit-content;color:#b8860b;border:1px solid #d4af37;background:none;">← 返回酒店列表</a>
-</div>
-</div>
-
-<!-- 六善 -->
-<div id="sixsenses" class="detail-page">
-<div class="detail-header" style="background:linear-gradient(135deg,#1a2a1f,#3d5c3d,#6b8f6b,#2a4030);">
-<a class="detail-back" href="#home-page">← 返回列表</a>
-<div class="name">苏梅岛六善</div>
-<div class="name-en">Six Senses Samui · 苏梅岛 Koh Samui</div>
-<div class="detail-badge" style="background:#abcaab;color:#1a2a1f;">🔥 3天2晚 · 6折优惠</div>
-</div>
-<div class="container detail-body">
-<div class="info-card">
-<input type="checkbox" id="s1" class="info-expand" checked>
-<label class="info-header" for="s1"><span class="icon">📍</span><span class="title">位置与交通</span><span class="arrow">▼</span></label>
-<div class="info-content"><p>位于苏梅岛北端悬崖之上，占地20英亩，被热带雨林包裹。距苏梅机场仅15分钟车程。</p></div>
-</div>
-<div class="info-card">
-<label class="info-header"><span class="icon">📊</span><span class="title">同城对比</span></label>
-<div class="compare-table">
-<div class="compare-row compare-hdr"><span class="c-hotel">酒店</span><span class="c-style">风格</span><span class="c-price">价格</span></div>
-<div class="compare-row active"><span class="c-hotel">✦ 六善</span><span class="c-style">原木自然</span><span class="c-price">5,000-10,000</span></div>
-<a class="c-link" href="#wsamui"><span class="c-hotel">W苏梅岛</span><span class="c-style">时尚派对</span><span class="c-price">4,500-9,000</span></a>
-</div>
-</div>
-<a class="detail-back" href="#home-page" style="display:block;text-align:center;margin:20px auto 0;width:fit-content;color:#b8860b;border:1px solid #d4af37;background:none;">← 返回酒店列表</a>
-</div>
-</div>
-
-<!-- W酒店 -->
-<div id="wsamui" class="detail-page">
-<div class="detail-header" style="background:linear-gradient(135deg,#1a0a2e,#4a1a6e,#e6197a,#0a0a1a);">
-<a class="detail-back" href="#home-page">← 返回列表</a>
-<div class="name">苏梅岛W酒店</div>
-<div class="name-en">W Koh Samui · 苏梅岛 Koh Samui</div>
-<div class="detail-badge" style="background:#e6197a;color:#fff;">🔥 3天2晚 · 6折优惠</div>
-</div>
-<div class="container detail-body">
-<div class="info-card">
-<input type="checkbox" id="w1" class="info-expand" checked>
-<label class="info-header" for="w1"><span class="icon">📍</span><span class="title">位置与交通</span><span class="arrow">▼</span></label>
-<div class="info-content"><p>位于苏梅岛湄南海滩（Mae Nam Beach），距机场20分钟车程。位置安静但去查汶夜市和渔人村都很方便。</p></div>
-</div>
-<div class="info-card">
-<label class="info-header"><span class="icon">📊</span><span class="title">同城对比</span></label>
-<div class="compare-table">
-<div class="compare-row compare-hdr"><span class="c-hotel">酒店</span><span class="c-style">风格</span><span class="c-price">价格</span></div>
-<a class="c-link" href="#sixsenses"><span class="c-hotel">六善</span><span class="c-style">原木自然</span><span class="c-price">5,000-10,000</span></a>
-<div class="compare-row active"><span class="c-hotel">✦ W苏梅岛</span><span class="c-style">时尚派对</span><span class="c-price">4,500-9,000</span></div>
-</div>
-</div>
-<a class="detail-back" href="#home-page" style="display:block;text-align:center;margin:20px auto 0;width:fit-content;color:#b8860b;border:1px solid #d4af37;background:none;">← 返回酒店列表</a>
-</div>
-</div>
-
-<!-- 曼谷文华东方 -->
-<div id="mandarin" class="detail-page">
-<div class="detail-header" style="background:linear-gradient(135deg,#2a2520,#5a5045,#d4c5a0,#3a3530);">
-<a class="detail-back" href="#home-page">← 返回列表</a>
-<div class="name">曼谷文华东方</div>
-<div class="name-en">Mandarin Oriental Bangkok · 曼谷 Bangkok</div>
-<div class="detail-badge" style="background:#d4c5a0;color:#2a2520;">🔥 3天2晚 · 6折优惠</div>
-</div>
-<div class="container detail-body">
-<div class="info-card">
-<input type="checkbox" id="m1" class="info-expand" checked>
-<label class="info-header" for="m1"><span class="icon">📍</span><span class="title">位置与交通</span><span class="arrow">▼</span></label>
-<div class="info-content"><p>坐落在湄南河畔，曼谷核心地段。距素万那普机场40分钟车程，距BTS Saphan Taksin站步行10分钟。</p></div>
-</div>
-<div class="info-card">
-<label class="info-header"><span class="icon">📊</span><span class="title">同城对比</span></label>
-<div class="compare-table">
-<div class="compare-row compare-hdr"><span class="c-hotel">酒店</span><span class="c-style">风格</span><span class="c-price">价格</span></div>
-<div class="compare-row active"><span class="c-hotel">✦ 文华东方</span><span class="c-style">殖民经典</span><span class="c-price">6,000-15,000</span></div>
-<a class="c-link" href="#capella"><span class="c-hotel">嘉佩乐</span><span class="c-style">现代极简</span><span class="c-price">7,000-14,000</span></a>
-<a class="c-link" href="#fsbangkok"><span class="c-hotel">曼谷四季</span><span class="c-style">大气稳重</span><span class="c-price">5,000-10,000</span></a>
-<a class="c-link" href="#peninsula"><span class="c-hotel">半岛</span><span class="c-style">东方优雅</span><span class="c-price">5,000-12,000</span></a>
-<a class="c-link" href="#waldorf"><span class="c-hotel">华尔道夫</span><span class="c-style">美式奢华</span><span class="c-price">4,000-8,000</span></a>
-</div>
-</div>
-<a class="detail-back" href="#home-page" style="display:block;text-align:center;margin:20px auto 0;width:fit-content;color:#b8860b;border:1px solid #d4af37;background:none;">← 返回酒店列表</a>
-</div>
-</div>
-
-<!-- 嘉佩乐 -->
-<div id="capella" class="detail-page">
-<div class="detail-header" style="background:linear-gradient(135deg,#1f1f1f,#4a4a4a,#8a8a7a,#2a2a2a);">
-<a class="detail-back" href="#home-page">← 返回列表</a>
-<div class="name">曼谷嘉佩乐</div>
-<div class="name-en">Capella Bangkok · 曼谷 Bangkok</div>
-<div class="detail-badge" style="background:#c0c0b0;color:#1f1f1f;">🔥 3天2晚 · 6折优惠</div>
-</div>
-<div class="container detail-body">
-<div class="info-card">
-<input type="checkbox" id="c1" class="info-expand" checked>
-<label class="info-header" for="c1"><span class="icon">📍</span><span class="title">位置与交通</span><span class="arrow">▼</span></label>
-<div class="info-content"><p>位于湄南河畔Charoenkrung路，曼谷最古老的街区之一。距BTS站步行15分钟。</p></div>
-</div>
-<div class="info-card">
-<label class="info-header"><span class="icon">📊</span><span class="title">同城对比</span></label>
-<div class="compare-table">
-<div class="compare-row compare-hdr"><span class="c-hotel">酒店</span><span class="c-style">风格</span><span class="c-price">价格</span></div>
-<a class="c-link" href="#mandarin"><span class="c-hotel">文华东方</span><span class="c-style">殖民经典</span><span class="c-price">6,000-15,000</span></a>
-<div class="compare-row active"><span class="c-hotel">✦ 嘉佩乐</span><span class="c-style">现代极简</span><span class="c-price">7,000-14,000</span></div>
-<a class="c-link" href="#fsbangkok"><span class="c-hotel">曼谷四季</span><span class="c-style">大气稳重</span><span class="c-price">5,000-10,000</span></a>
-<a class="c-link" href="#peninsula"><span class="c-hotel">半岛</span><span class="c-style">东方优雅</span><span class="c-price">5,000-12,000</span></a>
-<a class="c-link" href="#waldorf"><span class="c-hotel">华尔道夫</span><span class="c-style">美式奢华</span><span class="c-price">4,000-8,000</span></a>
-</div>
-</div>
-<a class="detail-back" href="#home-page" style="display:block;text-align:center;margin:20px auto 0;width:fit-content;color:#b8860b;border:1px solid #d4af37;background:none;">← 返回酒店列表</a>
-</div>
-</div>
-
-<!-- 曼谷四季 -->
-<div id="fsbangkok" class="detail-page">
-<div class="detail-header" style="background:linear-gradient(135deg,#0a1628,#1a3050,#2a5080,#0f1f35);">
-<a class="detail-back" href="#home-page">← 返回列表</a>
-<div class="name">曼谷四季</div>
-<div class="name-en">Four Seasons Bangkok · 曼谷 Bangkok</div>
-<div class="detail-badge" style="background:#a0c0e0;color:#0a1628;">🔥 3天2晚 · 6折优惠</div>
-</div>
-<div class="container detail-body">
-<div class="info-card">
-<input type="checkbox" id="f1" class="info-expand" checked>
-<label class="info-header" for="f1"><span class="icon">📍</span><span class="title">位置与交通</span><span class="arrow">▼</span></label>
-<div class="info-content"><p>湄南河畔，与嘉佩乐相邻，共享Charoenkrung街区的便利。距BTS站步行15分钟，酒店提供免费接驳船。</p></div>
-</div>
-<div class="info-card">
-<label class="info-header"><span class="icon">📊</span><span class="title">同城对比</span></label>
-<div class="compare-table">
-<div class="compare-row compare-hdr"><span class="c-hotel">酒店</span><span class="c-style">风格</span><span class="c-price">价格</span></div>
-<a class="c-link" href="#mandarin"><span class="c-hotel">文华东方</span><span class="c-style">殖民经典</span><span class="c-price">6,000-15,000</span></a>
-<a class="c-link" href="#capella"><span class="c-hotel">嘉佩乐</span><span class="c-style">现代极简</span><span class="c-price">7,000-14,000</span></a>
-<div class="compare-row active"><span class="c-hotel">✦ 曼谷四季</span><span class="c-style">大气稳重</span><span class="c-price">5,000-10,000</span></div>
-<a class="c-link" href="#peninsula"><span class="c-hotel">半岛</span><span class="c-style">东方优雅</span><span class="c-price">5,000-12,000</span></a>
-<a class="c-link" href="#waldorf"><span class="c-hotel">华尔道夫</span><span class="c-style">美式奢华</span><span class="c-price">4,000-8,000</span></a>
-</div>
-</div>
-<a class="detail-back" href="#home-page" style="display:block;text-align:center;margin:20px auto 0;width:fit-content;color:#b8860b;border:1px solid #d4af37;background:none;">← 返回酒店列表</a>
-</div>
-</div>
-
-<!-- 半岛 -->
-<div id="peninsula" class="detail-page">
-<div class="detail-header" style="background:linear-gradient(135deg,#1a1018,#4a2030,#8b3040,#2a1820);">
-<a class="detail-back" href="#home-page">← 返回列表</a>
-<div class="name">曼谷半岛</div>
-<div class="name-en">The Peninsula Bangkok · 曼谷 Bangkok</div>
-<div class="detail-badge" style="background:#d4af37;color:#1a1018;">🔥 3天2晚 · 6折优惠</div>
-</div>
-<div class="container detail-body">
-<div class="info-card">
-<input type="checkbox" id="p1" class="info-expand" checked>
-<label class="info-header" for="p1"><span class="icon">📍</span><span class="title">位置与交通</span><span class="arrow">▼</span></label>
-<div class="info-content"><p>湄南河西岸，位置相对安静但紧邻吞武里区域。提供免费接驳船至对岸的BTS站。</p></div>
-</div>
-<div class="info-card">
-<label class="info-header"><span class="icon">📊</span><span class="title">同城对比</span></label>
-<div class="compare-table">
-<div class="compare-row compare-hdr"><span class="c-hotel">酒店</span><span class="c-style">风格</span><span class="c-price">价格</span></div>
-<a class="c-link" href="#mandarin"><span class="c-hotel">文华东方</span><span class="c-style">殖民经典</span><span class="c-price">6,000-15,000</span></a>
-<a class="c-link" href="#capella"><span class="c-hotel">嘉佩乐</span><span class="c-style">现代极简</span><span class="c-price">7,000-14,000</span></a>
-<a class="c-link" href="#fsbangkok"><span class="c-hotel">曼谷四季</span><span class="c-style">大气稳重</span><span class="c-price">5,000-10,000</span></a>
-<div class="compare-row active"><span class="c-hotel">✦ 半岛</span><span class="c-style">东方优雅</span><span class="c-price">5,000-12,000</span></div>
-<a class="c-link" href="#waldorf"><span class="c-hotel">华尔道夫</span><span class="c-style">美式奢华</span><span class="c-price">4,000-8,000</span></a>
-</div>
-</div>
-<a class="detail-back" href="#home-page" style="display:block;text-align:center;margin:20px auto 0;width:fit-content;color:#b8860b;border:1px solid #d4af37;background:none;">← 返回酒店列表</a>
-</div>
-</div>
-
-<!-- 华尔道夫 -->
-<div id="waldorf" class="detail-page">
-<div class="detail-header" style="background:linear-gradient(135deg,#0a0a0a,#2a2a2a,#5a4a30,#1a1a1a);">
-<a class="detail-back" href="#home-page">← 返回列表</a>
-<div class="name">曼谷华尔道夫</div>
-<div class="name-en">Waldorf Astoria Bangkok · 曼谷 Bangkok</div>
-<div class="detail-badge" style="background:#d4af37;color:#0a0a0a;">🔥 3天2晚 · 6折优惠</div>
-</div>
-<div class="container detail-body">
-<div class="info-card">
-<input type="checkbox" id="wa1" class="info-expand" checked>
-<label class="info-header" for="wa1"><span class="icon">📍</span><span class="title">位置与交通</span><span class="arrow">▼</span></label>
-<div class="info-content"><p>位于曼谷市中心Ratchaprasong商圈核心，四面佛旁边。BTS Chit Lom站步行3分钟，Central World、Siam Paragon都在步行范围内。</p></div>
-</div>
-<div class="info-card">
-<label class="info-header"><span class="icon">📊</span><span class="title">同城对比</span></label>
-<div class="compare-table">
-<div class="compare-row compare-hdr"><span class="c-hotel">酒店</span><span class="c-style">风格</span><span class="c-price">价格</span></div>
-<a class="c-link" href="#mandarin"><span class="c-hotel">文华东方</span><span class="c-style">殖民经典</span><span class="c-price">6,000-15,000</span></a>
-<a class="c-link" href="#capella"><span class="c-hotel">嘉佩乐</span><span class="c-style">现代极简</span><span class="c-price">7,000-14,000</span></a>
-<a class="c-link" href="#fsbangkok"><span class="c-hotel">曼谷四季</span><span class="c-style">大气稳重</span><span class="c-price">5,000-10,000</span></a>
-<a class="c-link" href="#peninsula"><span class="c-hotel">半岛</span><span class="c-style">东方优雅</span><span class="c-price">5,000-12,000</span></a>
-<div class="compare-row active"><span class="c-hotel">✦ 华尔道夫</span><span class="c-style">美式奢华</span><span class="c-price">4,000-8,000</span></div>
-</div>
-</div>
-<a class="detail-back" href="#home-page" style="display:block;text-align:center;margin:20px auto 0;width:fit-content;color:#b8860b;border:1px solid #d4af37;background:none;">← 返回酒店列表</a>
-</div>
-</div>
-
-<!-- 清迈四季 -->
-<div id="fschiangmai" class="detail-page">
-<div class="detail-header" style="background:linear-gradient(135deg,#1a3018,#3a6a30,#6aaa4a,#2a5028);">
-<a class="detail-back" href="#home-page">← 返回列表</a>
-<div class="name">清迈四季</div>
-<div class="name-en">Four Seasons Chiang Mai · 清迈 Chiang Mai</div>
-<div class="detail-badge" style="background:#90d890;color:#1a3018;">🔥 3天2晚 · 6折优惠</div>
-</div>
-<div class="container detail-body">
-<div class="info-card">
-<input type="checkbox" id="fm1" class="info-expand" checked>
-<label class="info-header" for="fm1"><span class="icon">📍</span><span class="title">位置与交通</span><span class="arrow">▼</span></label>
-<div class="info-content"><p>位于清迈湄林谷（Mae Rim Valley），距清迈古城30分钟车程。远离古城喧嚣，被热带山林和稻田环绕。</p></div>
-</div>
-<div class="info-card">
-<label class="info-header"><span class="icon">📊</span><span class="title">同城对比</span></label>
-<div class="compare-table">
-<div class="compare-row compare-hdr"><span class="c-hotel">酒店</span><span class="c-style">风格</span><span class="c-price">价格</span></div>
-<div class="compare-row active"><span class="c-hotel">✦ 清迈四季</span><span class="c-style">田园泰式</span><span class="c-price">3,500-7,000</span></div>
-</div>
-</div>
-<a class="detail-back" href="#home-page" style="display:block;text-align:center;margin:20px auto 0;width:fit-content;color:#b8860b;border:1px solid #d4af37;background:none;">← 返回酒店列表</a>
-</div>
-</div>
-
+window.onscroll = function() {
+  var bt = document.getElementById("backtotop");
+  if(bt) {
+    if(document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+      bt.style.display = "flex";
+    } else {
+      bt.style.display = "none";
+    }
+  }
+};
+render(h);
+</script>
 </body>
 </html>
